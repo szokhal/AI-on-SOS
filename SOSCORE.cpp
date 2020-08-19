@@ -37,9 +37,9 @@ int commandline(wchar_t *com){
     com[i] = key.UnicodeChar;
     buf[0] = key.UnicodeChar;
     buf[1] = L'\0';
-    ST->ConOut->OutputString(ST->ConOut, (CHAR16*)buf);
+    printf(buf);
     if (com[i] == L'\r') {
-      ST->ConOut->OutputString(ST->ConOut, (CHAR16*)L"\r\n");
+      printf(L"\r\n");
       break;
     }
   }
@@ -53,15 +53,15 @@ void shell(){
   wchar_t com[MAX_COMMAND_LENGTH];	
 
   while(1){
-    ST->ConOut->OutputString(ST->ConOut, (CHAR16*)L"SHELL >");
+    printf(L"SHELL >");
     if(commandline(com) <= 0)
       continue;
     if(compare(L"hello", com))
-      ST->ConOut->OutputString(ST->ConOut, (CHAR16*)L"Hello World!\r\n");
+      printf(L"Hello World!\r\n");
     else if(compare(L"shutdown", com))
       return;
     else
-      ST->ConOut->OutputString(ST->ConOut, (CHAR16*)L"Command not found\r\n");
+      printf(L"Command not found\r\n");
     }
 }
 
@@ -69,8 +69,7 @@ EFI_STATUS EFIAPI EfiMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *System
   ST = SystemTable;
   ST->BootServices->SetWatchdogTimer(0, 0, 0, (CHAR16*)NULL);
   ST->ConOut->ClearScreen(ST->ConOut);
-  ST->ConOut->OutputString(ST->ConOut, (CHAR16*)L"WELCOME TO SHIZUDAI OS!\r\n");
-  printf(L"printftest\r\n");
+  printf(L"WELCOME TO SHIZUDAI OS!\r\n");
 
   shell();
 
