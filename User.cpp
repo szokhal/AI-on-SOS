@@ -18,4 +18,10 @@ public:
 		age = -1;
 		favorability = 0;
 	}
+
+	User() {
+		name = L"";
+		age = 0;
+		favorability = 0;
+	}
 }
