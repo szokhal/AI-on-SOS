@@ -4,8 +4,11 @@ EFI_SYSTEM_TABLE *ST;
 
 void strcpy(wchar_t *word1, wchar_t *word2){
   while(*word1 != L'\0')
-    word2++ = word1++;
-  ++word2 = L'\0';
+    word1 = word2++;
+    word1++;
+  }
+  ++word1 = L'\0';
+
 }
 
 void printf(wchar_t *stringptr){
