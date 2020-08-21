@@ -1,4 +1,4 @@
-#include <systemcall.h>
+#include "systemcall.cpp"
 #include "Command.cpp"
 
 class Com_hello : protected Command {
@@ -16,7 +16,7 @@ inline Com_hello::Com_hello() {
 }
 
 inline void Com_hello::makeKeywordList() override {
-	plug(keywords[0], L"hello");
+	plug(&keywords[0], L"hello");
 }
 
 inline void Com_hello::prepare(User* user) override {
