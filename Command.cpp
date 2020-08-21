@@ -1,4 +1,5 @@
 #include "systemcall.hpp"
+#include "User.cpp"
 #define MAX_KEYWORD_NUMBER 20
 
 class Command {
