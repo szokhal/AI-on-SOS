@@ -2,6 +2,18 @@
 
 EFI_SYSTEM_TABLE *ST;
 
+bool compare(wchar_t *word){
+  wchar_t com[MAX_COMMAND_LENGTH];
+  while(1){
+  if(commandline(com) <= 0)
+      continue;
+  if(strcmp(word, com))
+    return true;
+  else
+    return false;
+  }
+}
+
 void strcpy(wchar_t *word1, wchar_t *word2){
   while(*word1 != L'\0'){
     word1 = word2++;
@@ -15,7 +27,7 @@ void printf(wchar_t *stringptr){
     ST->ConOut->OutputString(ST->ConOut, (CHAR16*)stringptr);
 }
 
-bool compare(wchar_t *word1,wchar_t *word2){
+bool strcmp(wchar_t *word1,wchar_t *word2){
 
   bool equal = true;
 
@@ -65,9 +77,9 @@ void shell(){
     printf(L"SHELL >");
     if(commandline(com) <= 0)
       continue;
-    if(compare(L"hello", com))
+    if(strcmp(L"hello", com))
       printf(L"Hello World!\r\n");
-    else if(compare(L"shutdown", com))
+    else if(strcmp(L"shutdown", com))
       return;
     else
       printf(L"Command not found\r\n");
