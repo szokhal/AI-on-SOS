@@ -7,13 +7,13 @@ public:
 	int favorability;
 
 	//コンストラクタ
-	User(wchar_t * newName, int newAge) {
+	User(wchar_t* newName, int newAge) {
 		name = newName;
-		age  = newAge;
+		age = newAge;
 		favorability = 0;
 	}
 
-	User(wchar_t * newName) {
+	User(wchar_t* newName) {
 		name = newName;
 		age = -1;
 		favorability = 0;
@@ -24,4 +24,4 @@ public:
 		age = 0;
 		favorability = 0;
 	}
-}
+};
