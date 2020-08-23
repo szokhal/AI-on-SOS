@@ -14,6 +14,7 @@ public:
 	virtual void execute() {};
 };
 
+//strcpy‚Ý‚½‚¢‚È
 inline void Command::plug(wchar_t* memory, wchar_t* word) {
 	for (int i = 0; word = L'\0'; i++) {
 		memory[i] = word[i];
