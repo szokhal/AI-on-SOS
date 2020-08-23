@@ -4,16 +4,17 @@
 
 class Command {
 protected:
-	char_t keywords[MAX_KEYWORD_NUMBER][MAX_COMMAND_LENGTH];
+	wchar_t keywords[MAX_KEYWORD_NUMBER][MAX_COMMAND_LENGTH];
 	void plug(wchar_t* memory, wchar_t* word);
 
 public:
 	bool check(wchar_t* com);
-	virtual void makeKeywordList() = 0;
-	virtual void prepare(User* user) = 0;
-	virtual void execute() = 0;
+	virtual void makeKeywordList() {};
+	virtual void prepare(User* user) {};
+	virtual void execute() {};
 };
 
+//strcpy‚Ý‚½‚¢‚È
 inline void Command::plug(wchar_t* memory, wchar_t* word) {
 	for (int i = 0; word = L'\0'; i++) {
 		memory[i] = word[i];
@@ -21,8 +22,8 @@ inline void Command::plug(wchar_t* memory, wchar_t* word) {
 }
 
 inline bool Command::check(wchar_t* com) {
-	for (wchar_t* keyword = keywords; keyword != NULL; keyword++) {
-		if (compare(com, keyword)) {
+	for (int i = 0; i < MAX_KEYWORD_NUMBER; i++) {
+		if (compare(com, keywords[i])) {
 			return true;
 		}
 	}

@@ -1,27 +1,23 @@
+#pragma once
+
 #include "systemcall.cpp"
 
 class User {
 public:
-	wchar_t name[20];
-	int age;
-	int favorability;
+	wchar_t name[20] = L" ";
+	int age = 0;
+	int favorability = 0;
 
 	//コンストラクタ
-	User(wchar_t* newName, int newAge) {
-		name = newName;
+	User(wchar_t * newName, int newAge) {
+		strcpy(&name[0], newName);
 		age = newAge;
-		favorability = 0;
 	}
 
 	User(wchar_t* newName) {
-		name = newName;
+		strcpy(&name[0], newName);
 		age = -1;
-		favorability = 0;
 	}
 
-	User() {
-		name = L"";
-		age = 0;
-		favorability = 0;
-	}
+	User() {};
 };
