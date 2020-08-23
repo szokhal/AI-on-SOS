@@ -1,5 +1,6 @@
 #include "systemcall.cpp"
-#include "Com_hello.cpp"
+#include "User.cpp"
+#include "Commands/Com_hello.cpp"
 
 #define COMMAND_LIST_LENGTH 1
 
