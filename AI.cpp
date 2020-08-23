@@ -10,10 +10,10 @@
 class ArtificialIntelligence {
 public:
 	User user;
-	Command commandList[COMMAND_LIST_LENGTH];
+	Command* commandList[COMMAND_LIST_LENGTH];
 
 	ArtificialIntelligence() {
-		//ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Åƒtƒ@ƒCƒ‹‚©‚çî•ñ‘ã“ü
+		//ï¿½Rï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½^ï¿½Åƒtï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		commandList[0] = new Com_hello();
 		commandList[1] = new Com_good_morning();
 		commandList[2] = new Com_good_night();
@@ -30,9 +30,9 @@ public:
 			}
 
 			for (int i = 0; i < COMMAND_LIST_LENGTH; i++) {
-				if (commandList[i].check(com)) {
-					commandList[i].prepare(&user);
-					commandList[i].execute();
+				if (commandList[i]->check(com)) {
+					commandList[i]->prepare(&user);
+					commandList[i]->execute();
 				}
 			}
 		}
