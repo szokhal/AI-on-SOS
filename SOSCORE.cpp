@@ -1,6 +1,9 @@
 #include "systemcall.cpp"
 
 EFI_SYSTEM_TABLE *ST;
+EFI_SIMPLE_FILE_SYSTEM_PROTOCOL *SFSP;
+EFI_GUID sfsp_guid = EFI_SIMPLE_FILE_SYSTEM_PROTOCOL_GUID;
+wchar_t[20][10] datalist;
 
 bool compare(wchar_t *word){
   wchar_t com[MAX_COMMAND_LENGTH];
@@ -44,6 +47,30 @@ bool strcmp(wchar_t *word1,wchar_t *word2){
   else
     return false;
 }
+
+void filescan(){
+  EFI_FILE_PROTOCOL *root;
+  EFI_FILE_PROTOCOL *file;
+
+  CHAR16 *data = (CHAR16*)L" ";
+  CHAR16 *filename = (CHAR16*)L"pdata";
+  unsigned long long data_size = 1024;
+
+  SFSP->OpenVolume(SFSP,&root);
+  root->Open(root, &file, (CHAR16 *)L"pdata", EFI_FILE_MODE_READ, 0);
+  file->Read(file, &data_size, (CHAR16 *)data);
+  for(i = 0; ;i++){
+    for(j = 0; ;j++){
+      if(*data == L'\0')
+        return;
+      if(*data == L'\n')
+        break;
+      datalist[j][i] = *data++;
+    }
+    *data++;
+  }
+}
+
 
 int commandline(wchar_t *com){
 
