@@ -3,7 +3,7 @@
 EFI_SYSTEM_TABLE *ST;
 EFI_SIMPLE_FILE_SYSTEM_PROTOCOL *SFSP;
 EFI_GUID sfsp_guid = EFI_SIMPLE_FILE_SYSTEM_PROTOCOL_GUID;
-wchar_t[20][10] datalist;
+wchar_t datalist[20][10];
 
 bool compare(wchar_t *word){
   wchar_t com[MAX_COMMAND_LENGTH];
