@@ -1,8 +1,10 @@
 #include "systemcall.cpp"
 #include "User.cpp"
 #include "Commands/Com_hello.cpp"
+#include "Commands/Com_good_morning.cpp"
+#include "Commands/Com_good_night.cpp"
 
-#define COMMAND_LIST_LENGTH 1
+#define COMMAND_LIST_LENGTH 3
 
 class ArtificialIntelligence {
 public:
@@ -12,6 +14,8 @@ public:
 	ArtificialIntelligence() {
 		//コンストラクタでファイルから情報代入
 		commandList[0] = new Com_hello();
+		commandList[1] = new Com_good_morning();
+		commandList[2] = new Com_good_night();
 	}
 
 	void dialogue() {
