@@ -1,3 +1,4 @@
+#pragma once
 #include "systemcall.cpp"
 #include "User.cpp"
 #include "Commands/Com_hello.cpp"

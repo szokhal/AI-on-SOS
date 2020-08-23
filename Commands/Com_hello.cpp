@@ -5,7 +5,7 @@
 class Com_hello : protected Command {
 private:
 	//ユーザーの情報が必要なら書いておく
-	//prepare()内で初期化してから使って
+	//prepare()内で初期化してから使う
 	User* user;
 
 	//自分で関数を実装する場合はここで宣言

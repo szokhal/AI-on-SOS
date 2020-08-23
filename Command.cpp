@@ -1,3 +1,4 @@
+#pragma once
 #include "systemcall.cpp"
 #include "User.cpp"
 #define MAX_KEYWORD_NUMBER 20
