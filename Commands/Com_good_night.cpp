@@ -1,4 +1,3 @@
-#include "systemcall.cpp"
 #include "Command.cpp"
 
 class Com_good_night : protected Command {

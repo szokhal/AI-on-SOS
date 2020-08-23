@@ -1,5 +1,4 @@
 #pragma once
-
 #include "systemcall.cpp"
 
 class User {
@@ -8,7 +7,7 @@ public:
 	int age = 0;
 	int favorability = 0;
 
-	//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//ï¿½Rï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½^
 	User(wchar_t * newName, int newAge) {
 		strcpy(&name[0], newName);
 		age = newAge;
