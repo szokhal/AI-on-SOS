@@ -10,5 +10,5 @@ bool compare(wchar_t *word);
 int commandline(wchar_t *com);
 void printf(wchar_t *stringptr);
 void strcpy(wchar_t *word1, wchar_t *word2);
-bool strcmp(wchar_t *word1,wchar_t *word2)
+bool strcmp(wchar_t *word1,wchar_t *word2);
 void filescan();
