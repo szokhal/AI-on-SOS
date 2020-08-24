@@ -1,6 +1,6 @@
 #include "Command.cpp"
 
-class Com_good_morning : protected Command {
+class Com_good_morning : public Command {
 private:
 	User* user;
 
