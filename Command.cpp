@@ -24,7 +24,7 @@ inline void Command::plug(wchar_t* memory, wchar_t* word) {
 
 inline bool Command::check(wchar_t* com) {
 	for (int i = 0; i < MAX_KEYWORD_NUMBER; i++) {
-		if (strcmp(com, keywords[i])) {
+		if (compare(com, keywords[i])) {
 			return true;
 		}
 	}

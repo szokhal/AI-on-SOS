@@ -7,6 +7,7 @@ public:
 	int age = 0;
 	int favorability = 0;
 
+	//�R���X�g���N�^
 	User(wchar_t * newName, int newAge) {
 		strcpy(&name[0], newName);
 		age = newAge;
