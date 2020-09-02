@@ -13,7 +13,7 @@ public:
 	Command* commandList[COMMAND_LIST_LENGTH];
 
 	ArtificialIntelligence() {
-		//�R���X�g���N�^�Ńt�@�C����������
+        User *user = new User();
 		commandList[0] = new Com_hello();
 		commandList[1] = new Com_good_morning();
 		commandList[2] = new Com_good_night();
@@ -24,7 +24,7 @@ public:
 		wchar_t com[MAX_COMMAND_LENGTH];
 
 		while (1) {
-			ST->ConOut->OutputString(ST->ConOut, (CHAR16)L"AI DIALOGUE >");
+			printf(L"AI DIALOGUE >");
 			if (commandline(com) <= 0) {
 				continue;
 			}
