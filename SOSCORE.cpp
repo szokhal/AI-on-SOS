@@ -59,8 +59,8 @@ void filescan(){
   SFSP->OpenVolume(SFSP,&root);
   root->Open(root, &file, (CHAR16 *)L"pdata", EFI_FILE_MODE_READ, 0);
   file->Read(file, &data_size, (CHAR16 *)data);
-  for(unsigned int i = 0; ;i++){
-    for(unsigned int j = 0; ;j++){
+  for(i = 0; ;i++){
+    for(j = 0; ;j++){
       if(*data == L'\0')
         return;
       if(*data == L'\n')
