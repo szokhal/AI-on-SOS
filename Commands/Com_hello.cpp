@@ -1,7 +1,7 @@
 #include "Command.cpp"
 
 //�N���X����Com_*****�̌`�ɕύX����
-class Com_hello : protected Command {
+class Com_hello : public Command {
 private:
 	//���[�U�[�̏�񂪕K�v�Ȃ珑���Ă���
 	//prepare()���ŏ��������Ă���g��

@@ -4,7 +4,7 @@ extern "C" {
 
 #define MAX_COMMAND_LENGTH 100
 
-extern wchar_t[20][10] datalist;
+extern wchar_t datalist[20][10];
 extern EFI_SYSTEM_TABLE *ST;
 bool compare(wchar_t *word);
 int commandline(wchar_t *com);
