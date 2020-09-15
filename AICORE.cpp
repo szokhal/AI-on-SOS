@@ -5,37 +5,32 @@
 
 #define COMMAND_LIST_LENGTH 1
 
+User user;
+Com_hello *hello;
 
-struct ArtificialIntelligence {
-  User user;
-  Com_hello *hello;
-
-  void makeLists() {
+void makeLists() {
     hello->makeKeywordList();
-  }
+}
 
-  void dialogue() {
+void dialogue() {
     wchar_t com[MAX_COMMAND_LENGTH];
     printfs(L"Welcome!\r\n");
 
     while (1) {
-      printfs(L"\r\n< AI dialogue >\r\n");
+        printfs(L"\r\n< AI dialogue >\r\n");
 
-      if (commandline(com) <= 0) {
-        continue;
-      }
+        if (commandline(com) <= 0) {
+            continue;
+        }
 
-      if (hello->check(com)) {
-        hello->prepare(user);
-        hello->execute();
-      }
+        if (hello->check(com)) {
+            hello->prepare(user);
+            hello->execute();
+        }
     }
-  }
-};
-
+}
 
 void bootai() {
-  ArtificialIntelligence ai;
-  ai.makeLists();
-  ai.dialogue();
+    makeLists();
+    dialogue();
 }
