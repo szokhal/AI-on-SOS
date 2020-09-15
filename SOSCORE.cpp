@@ -116,7 +116,7 @@ void filewrite(){
     SFSP->OpenVolume(SFSP,&root);
     root->Open(root, &file, (CHAR16 *)L"pdata", EFI_FILE_MODE_READ, 0);
     for(unsigned int i = 0; i < 10 ; i++){
-        for(unsigned int i = 0; ; j++){
+        for(unsigned int j = 0; ; j++){
             if(datalist[j][i] == '\0')
                 break;
             *data = datalist[j][i];
