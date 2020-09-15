@@ -19,7 +19,7 @@ struct ArtificialIntelligence {
     printfs(L"Welcome!\r\n");
 
     while (1) {
-      printfs(L"<AI dialogue >\r\n");
+      printfs(L"\r\n< AI dialogue >\r\n");
 
       if (commandline(com) <= 0) {
         continue;
@@ -28,7 +28,6 @@ struct ArtificialIntelligence {
       if (hello->check(com)) {
         hello->prepare(user);
         hello->execute();
-        continue;
       }
     }
   }
