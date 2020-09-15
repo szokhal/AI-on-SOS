@@ -10,8 +10,8 @@ EFI_GUID sfsp_guid = EFI_SIMPLE_FILE_SYSTEM_PROTOCOL_GUID;
 EFI_GUID gop_guid = EFI_GRAPHICS_OUTPUT_PROTOCOL_GUID;
 static wchar_t datalist[20][10];
 
-#define img_width 500
-#define img_height 500
+#define img_width 200
+#define img_height 200
 
 
 void strcpys(wchar_t *word1, wchar_t *word2){
@@ -103,7 +103,7 @@ void filescan(){
   }
 }
 
-void imagetest(){
+void imageview(wchar_t *imgfilename){
 
   EFI_FILE_PROTOCOL *root;
   EFI_FILE_PROTOCOL *file;
@@ -113,7 +113,7 @@ void imagetest(){
   unsigned char *gptr = (unsigned char *)GOP->Mode->FrameBufferBase;
 
   SFSP->OpenVolume(SFSP, &root);
-  root->Open(root, &file, (CHAR16 *)L"aimage.bgra", EFI_FILE_MODE_READ, EFI_FILE_READ_ONLY);
+  root->Open(root, &file, (CHAR16 *) imgfilename, EFI_FILE_MODE_READ, EFI_FILE_READ_ONLY);
   file->Read(file, &data_size, (void *)img);
   unsigned int i,j,k,l = 0;
 
