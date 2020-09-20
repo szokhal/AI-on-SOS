@@ -11,7 +11,7 @@ struct Com_how_are_you{
   void Com_how_are_you::makeKeywordList() {
     keywords[0] = L"how are you?";
     keywords[1] = L"how are you";
-    keywords[2] = L"how do you feel today?" ;
+    keywords[2] = L"how do you feel today?";
     keywords[3] = L"how do you feel today";
   }
 
