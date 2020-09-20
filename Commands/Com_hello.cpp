@@ -26,8 +26,8 @@ struct Com_hello {
   }
 
   void Com_hello::execute() {
-    printfs(L"hi ");
-    printfs(user.name);
-    printfs(L".\r\n");
+    printf(L"hi ");
+    printf(user.name);
+    printf(L".\r\n");
   }
 };
