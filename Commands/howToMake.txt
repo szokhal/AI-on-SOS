@@ -40,9 +40,9 @@ struct Com_hello {
   実際に実行する関数
   main()と同じように考えてください
   void Com_hello::execute() {
-    printfs(L"hi ");
-    printfs(user->name);
-    printfs(L".\r\n");
+    printf(L"hi ");
+    printf(user->name);
+    printf(L".\r\n");
   }
 };  最後のセミコロンを忘れないようにする
     筆者はこのエラーの修正に２時間かけました
