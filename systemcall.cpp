@@ -16,3 +16,4 @@ void bootai();
 void fileread();
 void filewrite();
 void imageview(wchar_t *imgfilename);
+void scanfs(wchar_t *com);
