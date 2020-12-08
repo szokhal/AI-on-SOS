@@ -4,7 +4,7 @@
 
 #define MAX_GENDER_NUMBER 5
 
-static wchar_t howareyou_keywords[MAX_GENDER_NUMBER][20] = {{
+static wchar_t whatisyourgender_keywords[MAX_GENDER_NUMBER][20] = {{
 	L"What is your gender",
     L"What is your gender??",
     L"Are you male?",
