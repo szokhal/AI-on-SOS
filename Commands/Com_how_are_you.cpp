@@ -1,47 +1,48 @@
-#include "Command.cpp"
+#pragma once
+#include "../User.cpp"
+#include "../systemcall.cpp"
 
-class Com_howareyou : public Command {
-private:
-	User* user;
+#define MAX_HELLO_NUMBER 4
 
-public:
-	Com_howareyou();
-	void makeKeywordList() override;
-	void prepare(User* user) override;
-	void execute() override;
+static wchar_t _keywords[MAX_HELLO_NUMBER][20] = {{
+	L"how are you",
+    L"how are you?",
+    L"how are you today",
+    L"how are you today?"
 };
 
-inline Com_howareyou::Com_howareyou() {
-	makeKeywordList();
-}
+struct Com_howareyou {
+    User user;
 
-inline void Com_howareyou::makeKeywordList() {
-	plug(keywords[0], L"how are you");
-	plug(keywords[1], L"how are you?");
-    plug(keywords[2], L"how are you today");
-    plug(keywords[3], L"how are you today?");
-}
+    bool Com_howareyou::check(wchar_t *com) {
+        for (int i = 0; i < MAX_HELLO_NUMBER; i++) {
+            if (strcmps(com, howareyou_keywords[i]))
+                return true;
+        }
+        return false;
+    }
 
-inline void Com_howareyou::prepare(User* user) {
-	this->user = user;
-}
+    void Com_howareyou::prepare(User user) {
+        this->user = user;
+    }
 
-inline void Com_howareyou::execute() {
-	if(user->favoravirity < -50){
-        printf(L"Don't talk me ");
-	    printf(L"\r\n");
-    } else if(user->favoravirity >= -50 && user->facoravirity < 50){
-        printf(L"I'm fine thank you");
-        printf(user->name);
-        print(L"\r\n")
-    } else {
-        printf(L"I'm fine thank you");
-        printf(user->name);
-        printf(L"and you? \r\n");
-        if(compare(L"i'm fine thank you") || compare(L"me too")){
-            printf(L"Oh yeah \r\n");
+    void Com_howareyou::execute() {
+        if(user->favoravirity < -50){
+            printf(L"Don't talk me.");
+            printf(L"\r\n");
+        } else if(user.favoravirity >= -50 && user.facoravirity < 50){
+            printf(L"I'm fine thank you ");
+            printf(user.name);
+            print(L".\r\n");
         } else {
-            printf(L"Really? Take care of yourself");
+            printf(L"I'm fine thank you ");
+            printf(user.name);
+            printf(L" and you? \r\n");
+            if(compare(L"i'm fine thank you") || compare(L"me too")){
+                printf(L"Oh yeah.\r\n");
+            } else {
+                printf(L"Really? Take care of yourself.");
+            }
         }
     }
 }
