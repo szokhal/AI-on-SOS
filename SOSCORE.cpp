@@ -34,12 +34,11 @@ bool compare(wchar_t *word){
     }
 }
 
-wchar_t* scanfs(){
-    wchar_t com[MAX_COMMAND_LENGTH];
+void scanfs(wchar_t *com){
     while(1){
         if(commandline(com) <= 0)
             continue;
-        return com;
+        return;
     }
 }
 
