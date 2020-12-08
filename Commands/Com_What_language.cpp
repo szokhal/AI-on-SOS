@@ -4,11 +4,11 @@
 
 #define MAX_WHAT_LANGUAGE_NUMBER 4
 
-static wchar_t what_language_keywords[MAX_WHAT_LANGUAGE_NUMBER][20] = {
-  L"what_language do you speak",
+static wchar_t what_language_keywords[MAX_WHAT_LANGUAGE_NUMBER][30] = {
+  L"what language do you speak",
   L"What language do you speak",
-  L"what_language do you speak?",
-  L"What_language do you speak?"
+  L"what language do you speak?",
+  L"What language do you speak?"
 };
 
 struct Com_what_language {
