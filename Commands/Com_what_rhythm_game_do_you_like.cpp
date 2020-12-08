@@ -34,7 +34,7 @@ struct Com_whatrhythmgamedoyoulike {
         printfs(L"I like Project Sekai.");
         printfs(L"\r\n");
     } else {
-        printfs(L"I like Project Sekai");
+        printfs(L"I like Project Sekai!!");
         printfs(L"\r\n");
         printfs(L"It has a lot of Vocaloid songs!!");
         printfs(L"\r\n");
