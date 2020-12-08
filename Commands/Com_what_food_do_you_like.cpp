@@ -2,11 +2,11 @@
 #include "../User.cpp"
 #include "../systemcall.cpp"
 
-#define MAX_HELLO_NUMBER 2
+#define MAX_WHATFOODDOYOULIKE_NUMBER 2
 
-static wchar_t whatfooddoyoulike_keywords[MAX_HELLO_NUMBER][20] = {
+static wchar_t whatfooddoyoulike_keywords[MAX_HELLO_NUMBER][25] = {
 	L"what food do you like",
-    L"what food do you like?"
+  L"what food do you like?"
 };
 
 struct Com_whatfooddoyoulike {

@@ -2,9 +2,9 @@
 #include "../User.cpp"
 #include "../systemcall.cpp"
 
-#define MAX_HELLO_NUMBER 4
+#define MAX_HOWAREYOU_NUMBER 4
 
-static wchar_t _keywords[MAX_HELLO_NUMBER][20] = {{
+static wchar_t howareyou_keywords[MAX_HELLO_NUMBER][20] = {{
 	L"how are you",
     L"how are you?",
     L"how are you today",
