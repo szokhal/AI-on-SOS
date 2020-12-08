@@ -38,8 +38,8 @@ void scanfs(wchar_t *com){
     while(1){
         if(commandline(com) <= 0)
             continue;
-        return;
     }
+    return;
 }
 
 void printfs(wchar_t *stringptr){
