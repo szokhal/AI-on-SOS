@@ -8,7 +8,7 @@ EFI_SIMPLE_FILE_SYSTEM_PROTOCOL *SFSP;
 EFI_GRAPHICS_OUTPUT_PROTOCOL *GOP;
 EFI_GUID sfsp_guid = EFI_SIMPLE_FILE_SYSTEM_PROTOCOL_GUID;
 EFI_GUID gop_guid = EFI_GRAPHICS_OUTPUT_PROTOCOL_GUID;
-static wchar_t datalist[20][10];
+wchar_t datalist[20][10];
 
 #define img_width 200
 #define img_height 200
@@ -16,8 +16,8 @@ static wchar_t datalist[20][10];
 
 void strcpys(wchar_t *word1, wchar_t *word2){
     while(*word1 != L'\0'){
-        word1 = word2++;
-        word1++;
+        *word1 = *word2++;
+        *word1++;
     }
     ++*word1 = L'\0';
 }
@@ -31,6 +31,15 @@ bool compare(wchar_t *word){
             return true;
         else
             return false;
+    }
+}
+
+wchar_t* scanfs(){
+    wchar_t com[MAX_COMMAND_LENGTH];
+    while(1){
+        if(commandline(com) <= 0)
+            continue;
+        return com;
     }
 }
 
@@ -93,11 +102,15 @@ void fileread(){
     file->Read(file, &data_size, (CHAR16 *)data);
     for(unsigned int i = 0; ;i++){
         for(unsigned int j = 0; ;j++){
-            if(*data == L'\0')
+            if(*data == L'\0'){
+                datalist[i][j] = '\0';
                 return;
-            if(*data == L'\n')
+            }
+            if(*data == L'\n'){
+                datalist[i][j] = '\0';
                 break;
-            datalist[j][i] = *data++;
+            }
+            datalist[i][j] = *data++;
         }
         *data++;
     }
