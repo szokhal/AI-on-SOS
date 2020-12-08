@@ -28,16 +28,16 @@ struct Com_whatPCgamedoyoulike {
 
   void Com_whatPCgamedoyoulike::execute() {
     if(user->favoravirity < -50) {
-        printf(L"Why do I have to tell you that?");
-        printf(L"\r\n");
+        printfs(L"Why do I have to tell you that?");
+        printfs(L"\r\n");
     } else if(user->favoravirity < 50) {
-        printf(L"I like Dead by Daylight.");
-        printf(L"\r\n");
+        printfs(L"I like Dead by Daylight.");
+        printfs(L"\r\n");
     } else {
-        printf(L"I like Dead by Daylight!");
-        printf(L"\r\n");
-        printf(L"It's so exciting!!");
-        printf(L"\r\n");
+        printfs(L"I like Dead by Daylight!");
+        printfs(L"\r\n");
+        printfs(L"It's so exciting!!");
+        printfs(L"\r\n");
     }
   }
 };

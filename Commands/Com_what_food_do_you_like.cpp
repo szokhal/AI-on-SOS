@@ -26,17 +26,17 @@ void Com_whatfooddoyoulike::prepare(User * user) {
 
 void Com_whatfooddoyoulike::execute() {
 	if(user->favoravirity < 0){
-        printf(L"I like fast food, especially hamburgers");
-	    printf(L"\r\n");
+        printfs(L"I like fast food, especially hamburgers");
+	    printfs(L"\r\n");
     } else {
-        printf(L"I like fast food, especially hamburgers");
-        printf(L"\r\n");
-        printf(L"What do you like ");
-        printf(user->name);
-        printf(L"?");
-        print(L"\r\n");
+        printfs(L"I like fast food, especially hamburgers");
+        printfs(L"\r\n");
+        printfs(L"What do you like ");
+        printfs(user->name);
+        printfs(L"?");
+        printfs(L"\r\n");
         compare(L"asfdja");
-        printf(L"Really? Me too!");
-        printf(L"\r\n");
+        printfs(L"Really? Me too!");
+        printfs(L"\r\n");
     }
 }

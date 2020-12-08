@@ -28,20 +28,20 @@ struct Com_howareyou {
 
     void Com_howareyou::execute() {
         if(user->favoravirity < -50){
-            printf(L"Don't talk me.");
-            printf(L"\r\n");
+            printfs(L"Don't talk me.");
+            printfs(L"\r\n");
         } else if(user->favoravirity >= -50 && user->facoravirity < 50){
-            printf(L"I'm fine thank you ");
-            printf(user->name);
-            print(L".\r\n");
+            printfs(L"I'm fine thank you ");
+            printfs(user->name);
+            printfs(L".\r\n");
         } else {
-            printf(L"I'm fine thank you ");
-            printf(user->name);
-            printf(L" and you? \r\n");
+            printfs(L"I'm fine thank you ");
+            printfs(user->name);
+            printfs(L" and you? \r\n");
             if(compare(L"i'm fine thank you") || compare(L"me too")){
-                printf(L"Oh yeah.\r\n");
+                printfs(L"Oh yeah.\r\n");
             } else {
-                printf(L"Really? Take care of yourself.");
+                printfs(L"Really? Take care of yourself.");
             }
         }
     }
