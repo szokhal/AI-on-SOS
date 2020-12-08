@@ -10,7 +10,7 @@ static wchar_t whatfooddoyoulike_keywords[MAX_HELLO_NUMBER][25] = {
 };
 
 struct Com_whatfooddoyoulike {
-  User user;
+  User * user;
 
   bool Com_whatfooddoyoulike::check(wchar_t *com) {
     for (int i = 0; i < MAX_HELLO_NUMBER; i++) {
@@ -20,7 +20,7 @@ struct Com_whatfooddoyoulike {
     return false;
   }
 
-void Com_whatfooddoyoulike::prepare(User user) {
+void Com_whatfooddoyoulike::prepare(User * user) {
 	this->user = user;
 }
 
