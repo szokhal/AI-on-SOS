@@ -2,14 +2,18 @@
 #include "../User.cpp"
 #include "../systemcall.cpp"
 
-#define MAX_WHATPCGAMEDOYOULIKE_NUMBER 4
+#define MAX_WHATPCGAMEDOYOULIKE_NUMBER 8
 
-static wchar_t whatPCgamedoyoulike_keywords[MAX_HELLO_NUMBER][30] = {
+static wchar_t whatPCgamedoyoulike_keywords[MAX_WHATPCGAMEDOYOULIKE_NUMBER][30] = {
   L"what PC game do you like",
-  L"what PC game do you like?"
-  L"what pc game do you like"
-  L"what pc game do you like?"
-  };
+  L"what PC game do you like?",
+  L"what pc game do you like",
+  L"what pc game do you like?",
+  L"What PC game do you like",
+  L"What PC game do you like?",
+  L"What pc game do you like",
+  L"What pc game do you like?"
+ };
 
 struct Com_whatPCgamedoyoulike {
   User * user;
@@ -27,10 +31,10 @@ struct Com_whatPCgamedoyoulike {
   }
 
   void Com_whatPCgamedoyoulike::execute() {
-    if(user->favoravirity < -50) {
+    if(user->favoravility < -50) {
         printfs(L"Why do I have to tell you that?");
         printfs(L"\r\n");
-    } else if(user->favoravirity < 50) {
+    } else if(user->favoravility < 50) {
         printfs(L"I like Dead by Daylight.");
         printfs(L"\r\n");
     } else {
@@ -39,5 +43,6 @@ struct Com_whatPCgamedoyoulike {
         printfs(L"It's so exciting!!");
         printfs(L"\r\n");
     }
+    user->favoravility += 10;
   }
 };
