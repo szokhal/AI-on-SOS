@@ -27,7 +27,7 @@ struct Com_what_language {
   }
 
   void Com_what_language::execute() {
-    if(user->favoravility < -50){
+    if(user->favorability < -50){
       printfs(L"Who the fuck do you think you are?\n\r");
     } else if(user->favorability < 50) {
       printfs(L"I can speak a bit of English.\n\r");

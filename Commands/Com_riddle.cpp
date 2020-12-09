@@ -27,15 +27,15 @@ struct Com_riddle {
   }
 
   void Com_riddle::execute() {
-    if(user->favoravility < -50){
+    if(user->favorability < -50){
       printfs(L"During what month do people sleep the least?\n\r");
-      user->favoravility += 20; 
-    } else if(user->favoravility >= -50 && user->facoravility < 50){
+      user->favorability += 20; 
+    } else if(user->favorability >= -50 && user->facoravility < 50){
       printfs(L" What is the center of gravity?\n\r");
-      user->favoravility += 20; 
+      user->favorability += 20; 
     }else {
       printfs(L" What has to be broken before you can use it?\n\r");
-      user->favoravility += 20; 
+      user->favorability += 20; 
     }
   }
 };

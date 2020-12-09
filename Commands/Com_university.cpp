@@ -26,15 +26,15 @@ struct Com_university {
   }
 
   void Com_university::execute() {
-    if(user->favoravility < -50){
+    if(user->favorability < -50){
       printfs(L"I'm nothing to say to you.\n\r");
-    } else if(user->favoravility >= -50 && user->facoravility < 50){
+    } else if(user->favorability >= -50 && user->favorability < 50){
       printfs(L"I belong to Shizuoka University.\n\r");
-      user->favoravility += 10; 
+      user->favorability += 10; 
     }else {
       printfs(L"I belong to Shizuoka University.\n\r");
       printfs(L"I'm made as a college assignment.\n\r");
-      user->favoravility += 10; 
+      user->favorability += 10; 
     }
   }
 };

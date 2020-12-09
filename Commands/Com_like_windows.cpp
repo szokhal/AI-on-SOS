@@ -26,15 +26,15 @@ struct Com_like_windows {
   }
 
   void Com_like_windows::execute() {
-    if(user->favoravility < -50){
+    if(user->favorability < -50){
       printfs(L"I hate you.\n\r");
-      user->favoravility -= 10; 
-    } else if(user->favoravility >= -50 && user->facoravility < 50){
+      user->favorability -= 10; 
+    } else if(user->favorability >= -50 && user->favorability < 50){
       printfs(L"I hate windows.\n\r");
-      user->favoravility -= 20; 
+      user->favorability -= 20; 
     }else {
       printfs(L"I don't like windows.\n\r");
-      user->favoravility -= 20; 
+      user->favorability -= 20; 
     }
   }
 };

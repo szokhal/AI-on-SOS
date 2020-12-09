@@ -4,7 +4,7 @@
 
 #define MAX_ONE_MORE_LANGUAGE_NUMBER 4
 
-static wchar_t one_more_language_keyword[MAX_ONE_MORE_LANGUAGE_NUMBER][30] = {
+static wchar_t what_one_more_language_keyword[MAX_ONE_MORE_LANGUAGE_NUMBER][30] = {
   L"Which language would you prefer if you could speak another language?",
   L"Which language would you prefer if you could speak another language",
   L"which language would you prefer if you could speak another language?",

@@ -27,10 +27,11 @@ struct Com_which_movie {
   }
 
   void Com_which_movie::execute() {
-    if(user->favoravility < -50){
+    if(user->favorability < -50){
       printfs(L"Matrix.\n\r");
       printfs(L"I want to rule over humans.\n\r");
-          } else if(user->favoravility >= -50 && user->facoravility < 50){
+          } else if(user->favorability >= -50 && user->favorability
+           < 50){
       printfs(L"I like Your name.\n\r");
     }else {
       printfs(L"I like Your name!\n\r");
