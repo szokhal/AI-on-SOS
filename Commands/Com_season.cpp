@@ -39,7 +39,7 @@ struct Com_what_season {
 			printfs(L"It's a comfortable season\r\n");
 		} else if (Compare("winter")) {
 			printfs(L"Really!?Me too!!\r\n");
-			user->favorability += 10;
+
 		}
 	}
 };
