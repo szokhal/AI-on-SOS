@@ -18,6 +18,7 @@ struct Com_you_are_cute {
                 return true;
             }
         }
+        return false;
     }
 
     void Com_you_are_cute::prepare(User* user) {
