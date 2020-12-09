@@ -19,6 +19,7 @@ struct Com_ok_google {
                 return true;
             }
         }
+        return false;
     }
 
     void Com_ok_google::prepare(User* user) {
