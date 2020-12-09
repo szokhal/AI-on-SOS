@@ -27,7 +27,7 @@ struct Com_whatfooddoyoulike {
     }
 
     void Com_whatfooddoyoulike::execute() {
-        if(user->favoravility < 0){
+        if(user->favorability < 0){
             imageview(L"normal.bgra");
             printfs(L"I like fast food, especially hamburgers");
             printfs(L"\r\n");
@@ -43,6 +43,6 @@ struct Com_whatfooddoyoulike {
             printfs(L"Really? Me too!");
             printfs(L"\r\n");
         }
-        user->favoravility += 10;
+        user->favorability += 10;
     }
 };

@@ -27,12 +27,12 @@ struct Com_ilikeyourvoice {
     }
 
     void Com_ilikeyourvoice::execute() {
-        if(user->favoravility < 0){
+        if(user->favorability < 0){
             imageview(L"depressed.bgra");
             printfs(L"Just stop harassing me");
             printfs(L"\r\n");
-            user->favoravility -= 20;
-        } else if(user->favoravility < 50){
+            user->favorability -= 20;
+        } else if(user->favorability < 50){
             imageview(L"normal.bgra");
             printfs(L"I don't have a voice feature, but what's wrong?");
             printfs(L"\r\n");
@@ -43,7 +43,7 @@ struct Com_ilikeyourvoice {
             printfs(L"......\r\n");
             printfs(L"But someday I'd like to speak out too");
             printfs(L"\r\n");
-            user->favoravility += 10;
+            user->favorability += 10;
         }
     }
 };

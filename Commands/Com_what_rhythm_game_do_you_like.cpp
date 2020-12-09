@@ -27,11 +27,11 @@ struct Com_whatrhythmgamedoyoulike {
     }
 
     void Com_whatrhythmgamedoyoulike::execute() {
-        if(user->favoravility < -50) {
+        if(user->favorability < -50) {
             imaageview(L"jitome.bgra");
             printfs(L"Why do I have to tell you that?");
             printfs(L"\r\n");
-        } else if(user->favoravility < 50) {
+        } else if(user->favorability < 50) {
             imageview(L"smile.bgra");
             printfs(L"I like Project Sekai.");
             printfs(L"\r\n");
@@ -42,6 +42,6 @@ struct Com_whatrhythmgamedoyoulike {
             printfs(L"It has a lot of Vocaloid songs!!");
             printfs(L"\r\n");
         }
-        user->favoravility += 15;
+        user->favorability += 15;
     }
 };

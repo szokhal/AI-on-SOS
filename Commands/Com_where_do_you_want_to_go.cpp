@@ -27,16 +27,16 @@ struct Com_wheredoyouwanttogo {
     }
 
     void Com_wheredoyouwanttogo::execute() {
-        if(user->favoravility < 0){
+        if(user->favorability < 0){
             imageview(L"depressed.bgra");
             printfs(L"Wherever you're not");
             printfs(L"\r\n");
-            user->favoravility -= 10;
-        } else if(user->favoravility < 50){
+            user->favorability -= 10;
+        } else if(user->favorability < 50){
             imageview(L"normal.bgra");
             printfs(L"I want to go to sea");
             printfs(L"\r\n");
-            user->favoravility += 10;
+            user->favorability += 10;
         } else {
             imageview(L"smile.bgra");
             printfs(L"I want to go to sea!");
@@ -46,9 +46,9 @@ struct Com_wheredoyouwanttogo {
             printfs(L"\r\n");
             if(compare(L"Yes") || compare(L"Me too")){
                 printfs(L"I'm glad!!");
-                user->favoravility += 20;
+                user->favorability += 20;
             } else {
-                user->favoravility += 10;
+                user->favorability += 10;
             }
         }
     }

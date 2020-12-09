@@ -27,21 +27,21 @@ struct Com_ihateyou {
     }
 
     void Com_ihateyou::execute() {
-        if(user->favoravility < 0){
+        if(user->favorability < 0){
             imageview(L"jitome.bgra");
             printfs(L"Sorry coffee break, and?");
             printfs(L"\r\n");
-            user->favoravility -= 10;
-        } else if(user->favoravility < 50){
+            user->favorability -= 10;
+        } else if(user->favorability < 50){
             imageview(L"surprise.bgra");
             printfs(L"....What?");
             printfs(L"\r\n");
-            user->favoravility -= 20;
+            user->favorability -= 20;
         } else {
             imageview(L"crying.bgra");
             printfs(L"Why would you say that...?");
             printfs(L"\r\n");
-            user->favoravility -= 10;
+            user->favorability -= 10;
         }
     }
 };

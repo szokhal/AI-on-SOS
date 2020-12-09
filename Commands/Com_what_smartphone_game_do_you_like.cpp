@@ -27,11 +27,11 @@ struct Com_whatsmartphonegamedoyoulike {
     }
 
     void Com_whatsmartphonegamedoyoulike::execute() {
-        if(user->favoravility < -50) {
+        if(user->favorability < -50) {
             imageview(L"depressed.bgra");
             printfs(L"Don't open your mouth.");
             printfs(L"\r\n");
-        } else if(user->favoravility < 50) {
+        } else if(user->favorability < 50) {
             imageview(L"normal.bgra");
             printfs(L"I like Monster Strike.");
             printfs(L"\r\n");
@@ -42,6 +42,6 @@ struct Com_whatsmartphonegamedoyoulike {
             printfs(L"It has fun!");
             printfs(L"\r\n");
         }
-        user->favoravility += 10;
+        user->favorability += 10;
     }
 };

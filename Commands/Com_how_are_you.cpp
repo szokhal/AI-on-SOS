@@ -31,11 +31,11 @@ struct Com_howareyou {
     }
 
     void Com_howareyou::execute() {
-        if(user->favoravility < -50){
+        if(user->favorability < -50){
             imageview(L"depressed.bgra");
             printfs(L"Don't talk me.");
             printfs(L"\r\n");
-        } else if(user->favoravility >= -50 && user->facoravility < 50){
+        } else if(user->favorability >= -50 && user->favorability < 50){
             imageview(L"normal.bgra");
             printfs(L"I'm fine thank you ");
             printfs(user->name);
@@ -51,6 +51,6 @@ struct Com_howareyou {
                 printfs(L"Really? Take care of yourself.");
             }
         }
-        user->favoravility += 10;
+        user->favorability += 10;
     }
 };

@@ -27,21 +27,21 @@ struct Com_whatisyourfavoritesport {
     }
 
     void Com_whatisyourfavoritesport::execute() {
-        if(user->favoravility < -50){
+        if(user->favorability < -50){
             imageview(L"depressed.bgra");
             printfs(L"No worth for me to talk");
             printfs(L"\r\n");
-        } else if(user->favoravility < 50){
+        } else if(user->favorability < 50){
             imageview(L"normal.bgra");
             printfs(L"I like to watch sports in any event");
             printfs(L"\r\n");
-            user->favoravility += 10;
+            user->favorability += 10;
         } else {
             imageview(L"smile.bgra");
             printfs(L"I like to watch sports in any event");
             printfs(L"\r\n");
             printfs(L"I want to try esports")
-            user->favoravility += 10;
+            user->favorability += 10;
         }
     }
 };
