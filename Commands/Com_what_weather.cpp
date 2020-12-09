@@ -13,7 +13,7 @@ static wchar_t what_weather_keywords[MAX_WHAT_WEATHER_NUMBER][20] {
 struct Com_what_weather {
     User* user;
 
-    Com_what_weather::check(wchar_t* com) {
+    bool Com_what_weather::check(wchar_t* com) {
         for (int i = 0; i < MAX_WHAT_WEATHER_NUMBER; i++) {
             if (strcmps(com, what_weather_keywords[i])) {
                 return true;
