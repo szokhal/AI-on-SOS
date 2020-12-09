@@ -27,10 +27,10 @@ struct Com_get_age {
     void Com_get_age::execute() {
         printfs(L"You are ");
 
-        wchar_t age[10] = "";
+        wchar_t age[10] = L"";
         itow(user->age, age);
         printfs(age);
 
         printfs(L"\r\n");
     }
-}
+};
