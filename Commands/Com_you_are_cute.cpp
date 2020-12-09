@@ -33,4 +33,4 @@ struct Com_you_are_cute {
             user->favorability += 3;
         }
     }
-}
+};
