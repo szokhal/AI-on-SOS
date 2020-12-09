@@ -32,12 +32,15 @@ struct Com_whatTVgamedoyoulike {
 
   void Com_whatTVgamedoyoulike::execute() {
     if(user->favoravility < -50) {
+        imageview(L"jitome.bgra");
         printfs(L"Why do I have to tell you that?");
         printfs(L"\r\n");
     } else if(user->favoravility < 50) {
+        imageview(L"normal.bgra");
         printfs(L"I like Pikmin.");
         printfs(L"\r\n");
     } else {
+        imageview(L"smile.bgra");
         printfs(L"I like Pikmin");
         printfs(L"\r\n");
         printfs(L"Pikmins are so cute!!");

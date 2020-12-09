@@ -28,14 +28,17 @@ struct Com_youreyesarebeautiful {
 
   void Com_youreyesarebeautiful::execute() {
     if(user->favoravility < -50) {
+        imageview(L"jitome.bgra");
         printfs(L"Very funny.");
         printfs(L"\r\n");
         user->favoravility -= 20;
     } else if(user->favoravility < 50) {
+        imageview(L"smile.bgra");
         printfs(L"Thank you.");
         printfs(L"\r\n");
         user->favoravility += 20;
     } else {
+        imageview(L"big_smile.bgra");
         printfs(L"Thank you!!");
         printfs(L"\r\n");
         printfs(L"I'm so happy!!");

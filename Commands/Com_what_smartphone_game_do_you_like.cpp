@@ -28,12 +28,15 @@ struct Com_whatsmartphonegamedoyoulike {
 
   void Com_whatsmartphonegamedoyoulike::execute() {
     if(user->favoravility < -50) {
+        imageview(L"depressed.bgra");
         printfs(L"Don't open your mouth.");
         printfs(L"\r\n");
     } else if(user->favoravility < 50) {
+        imageview(L"normal.bgra");
         printfs(L"I like Monster Strike.");
         printfs(L"\r\n");
     } else {
+        imageview(L"smile.bgra");
         printfs(L"I like Monster Strike!");
         printfs(L"\r\n");
         printfs(L"It has fun!");
