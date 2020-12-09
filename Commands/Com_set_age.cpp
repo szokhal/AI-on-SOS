@@ -12,7 +12,7 @@ static wchar_t set_age_keywords[MAX_SET_AGE_NUMBER][20] {
 struct Com_set_age {
     User* user;
 
-    bool Com_set_age::check(wchar* com) {
+    bool Com_set_age::check(wchar_t* com) {
         for (int i = 0; i < MAX_SET_AGE_NUMBER; i++) {
             if (strcmps(com, set_age_keywords[i])) {
                 return true;
