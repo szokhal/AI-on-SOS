@@ -20,7 +20,11 @@ struct Com_you_are_cute {
         }
     }
 
-    void Com_you_are_cute::prepare() {
+    void Com_you_are_cute::prepare(User* user) {
+        this->user = user;
+    }
+
+    void Com_you_are_cute::execute() {
         if(user->favorability < -50) {
             printfs(L"Are you confused?\r\n");
             user->favorability -= 5;
