@@ -45,7 +45,7 @@ struct Com_howareyou {
             printfs(L"I'm fine thank you ");
             printfs(user->name);
             printfs(L" and you? \r\n");
-            if(compare(L"I'm fine thank you") || compare(L"me too")){
+            if(compare(L"I'm fine thank you") || compare(L"Me too")){
                 printfs(L"Oh yeah.\r\n");
             } else {
                 printfs(L"Really? Take care of yourself.");

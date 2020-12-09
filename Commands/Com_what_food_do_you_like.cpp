@@ -5,44 +5,44 @@
 #define MAX_WHATFOODDOYOULIKE_NUMBER 4
 
 static wchar_t whatfooddoyoulike_keywords[MAX_WHATFOODDOYOULIKE_NUMBER][25] = {
-	L"what food do you like",
-  L"what food do you like?",
-  L"What food do you like",
-  L"What food do you like?"
+    L"what food do you like",
+    L"what food do you like?",
+    L"What food do you like",
+    L"What food do you like?"
 };
 
 struct Com_whatfooddoyoulike {
-  User * user;
+    User * user;
 
-  bool Com_whatfooddoyoulike::check(wchar_t *com) {
-    for (int i = 0; i < MAX_WHATFOODDOYOULIKE_NUMBER; i++) {
-      if (strcmps(com, whatfooddoyoulike_keywords[i]))
-        return true;
+    bool Com_whatfooddoyoulike::check(wchar_t *com) {
+        for (int i = 0; i < MAX_WHATFOODDOYOULIKE_NUMBER; i++) {
+          if (strcmps(com, whatfooddoyoulike_keywords[i]))
+            return true;
+        }
+        return false;
     }
-    return false;
-  }
 
-  void Com_whatfooddoyoulike::prepare(User * user) {
-    this->user = user;
-  }
-
-  void Com_whatfooddoyoulike::execute() {
-    if(user->favoravility < 0){
-        imageview(L"normal.bgra");
-        printfs(L"I like fast food, especially hamburgers");
-        printfs(L"\r\n");
-    } else {
-        imageview(L"smile.bgra");
-        printfs(L"I like fast food, especially hamburgers");
-        printfs(L"\r\n");
-        printfs(L"What do you like ");
-        printfs(user->name);
-        printfs(L"?");
-        printfs(L"\r\n");
-        compare(L"asfdja");
-        printfs(L"Really? Me too!");
-        printfs(L"\r\n");
+    void Com_whatfooddoyoulike::prepare(User * user) {
+        this->user = user;
     }
-    user->favoravility += 10;
-  }
+
+    void Com_whatfooddoyoulike::execute() {
+        if(user->favoravility < 0){
+            imageview(L"normal.bgra");
+            printfs(L"I like fast food, especially hamburgers");
+            printfs(L"\r\n");
+        } else {
+            imageview(L"smile.bgra");
+            printfs(L"I like fast food, especially hamburgers");
+            printfs(L"\r\n");
+            printfs(L"What do you like ");
+            printfs(user->name);
+            printfs(L"?");
+            printfs(L"\r\n");
+            compare(L"asfdja");
+            printfs(L"Really? Me too!");
+            printfs(L"\r\n");
+        }
+        user->favoravility += 10;
+    }
 };
