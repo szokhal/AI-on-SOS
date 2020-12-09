@@ -18,6 +18,7 @@ struct Com_set_age {
                 return true;
             }
         }
+        return false;
     }
 
     void Com_set_age::prepare(User* user) {
