@@ -17,3 +17,5 @@ void fileread(wchar_t* data, wchar_t* filename);
 void filewrite(wchar_t* data, wchar_t* filename);
 void imageview(wchar_t *imgfilename);
 void scanfs(wchar_t *com);
+int  wtoi(char* str, int length);
+void itow(int num, char* str);
