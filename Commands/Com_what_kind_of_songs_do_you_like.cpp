@@ -42,4 +42,5 @@ struct Com_whatkindofsongsdoyoulike {
             printfs(L"\r\n");
             user->favorability += 10;
         }
-    };
+    }
+};

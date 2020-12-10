@@ -41,4 +41,4 @@ struct Com_canyouteachmeprogramming {
             user->favorability += 10;
         }
     }
-;
+};
