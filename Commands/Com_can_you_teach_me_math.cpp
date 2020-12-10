@@ -35,7 +35,7 @@ struct Com_canyouteachmemath {
             imageview(L"smile.bgra");
             printfs(L"No");
             printfs(L"\r\n");
-            printfs(L"It is important to think and study for yourself, ");
+            printfs(L"I can't teach you, ");
             printfs(user->name);
             printfs(L"\r\n");
             user->favorability += 10;
