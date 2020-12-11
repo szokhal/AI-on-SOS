@@ -30,15 +30,15 @@ struct Com_greeting {
 	void Com_greeting::execute() {
 		printfs(L"Where?\r\n");
 		printfs(L"Japanese,English,Spanish,Chinese,Germany\r\n");
-		if (Compare(L"Japanese")) {
+		if (compare(L"Japanese")) {
 			printfs(L"Konnichiha!\r\n");
-		} else if (Compare(L"English")) {
+		} else if (compare(L"English")) {
 			printfs(L"Hello!\r\n");
-		} else if (Compare(L"Spanish")) {
+		} else if (compare(L"Spanish")) {
 			printfs(L"Hola!\r\n");
-		} else if (Compare("Germany")) {
+		} else if (compare("Germany")) {
 			printfs(L"Guten Tag!\r\n");
-		}else if (Compare("Chinese")) {
+		}else if (compare("Chinese")) {
 			printfs(L"Ni hao!\r\n");
 		}
 	}

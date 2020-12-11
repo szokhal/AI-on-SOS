@@ -4,7 +4,7 @@
 
 #define MAX_OMAE_KAWAII_NUMBER 2  // MAX_HELLO
 
-static wchar_t omae_kawaii_keywords[MAX_OMAE_KAWAII_NUMBER][20] = { // ユーザー側が入力する言葉
+static wchar_t omae_kawaii_keywords[MAX_OMAE_KAWAII_NUMBER][20] = {
   L"omae kawaii",
   L"kawaii"
 };

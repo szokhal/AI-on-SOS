@@ -28,7 +28,7 @@ struct Com_whatrhythmgamedoyoulike {
 
     void Com_whatrhythmgamedoyoulike::execute() {
         if(user->favorability < -50) {
-            imaageview(L"jitome.bgra");
+            imageview(L"jitome.bgra");
             printfs(L"Why do I have to tell you that?");
             printfs(L"\r\n");
         } else if(user->favorability < 50) {

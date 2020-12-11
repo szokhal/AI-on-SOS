@@ -46,4 +46,4 @@ struct Com_whatisyourgender {
             }
         }
     }
-}
+};

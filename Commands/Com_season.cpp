@@ -31,13 +31,13 @@ struct Com_what_season {
 	void Com_what_season::execute() {
 		printfs(L"I like winter\r\n");
 		printfs(L"How about you?");
-		if (Compare(L"spring")) {
+		if (compare(L"spring")) {
 			printfs(L"There are a lot of pollen\r\n");
-		} else if (Compare(L"summer")) {
+		} else if (compare(L"summer")) {
 			printfs(L"There are many fun events\r\n");
-		} else if (Compare(L"autumn")||Compare("fall")) {
+		} else if (compare(L"autumn")||compare("fall")) {
 			printfs(L"It's a comfortable season\r\n");
-		} else if (Compare("winter")) {
+		} else if (compare("winter")) {
 			printfs(L"Really!?Me too!!\r\n");
 		}
 	}

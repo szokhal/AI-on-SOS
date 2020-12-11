@@ -15,7 +15,7 @@ struct Com_when_you_are_happy {
   User* user;
 
   bool Com_when_you_are_happy::check(wchar_t *com) {
-    for (int i = 0; i < MAX_HELLO_NUMBER; i++) {
+    for (int i = 0; i < MAX_WHEN_YOU_ARE_HAPPY_NUMBER; i++) {
       if (strcmps(com, when_you_are_happy_keywords[i]))
         return true;
     }
