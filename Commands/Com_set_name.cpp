@@ -27,6 +27,7 @@ struct Com_set_name {
 
     void Com_set_name::execute() {
         printfs(L"Please type your name.\r\n");
+        fillNUll(user->name, 35);
         scanfs(user->name);
         printfs(L"Good name ");
         printfs(user->name);
