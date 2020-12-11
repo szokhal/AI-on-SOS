@@ -29,7 +29,7 @@ struct Com_omae_kawaii {
   void Com_omae_kawaii::execute() { //main
     printfs(L"Arigato ");
     // 画像変更入れたい
-    bool = true;    
+    suki = true;    
     printfs(user->name);
     printfs(L"!.\r\n");
   }
