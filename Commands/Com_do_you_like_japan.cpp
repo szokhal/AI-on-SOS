@@ -2,13 +2,17 @@
 #include "../User.cpp"
 #include "../systemcall.cpp"
 
-#define MAX_DOYOULIKEJAPAN_NUMBER 4
+#define MAX_DOYOULIKEJAPAN_NUMBER 8
 
 static wchar_t doyoulikejapan_keywords[MAX_DOYOULIKEJAPAN_NUMBER][20] = {
     L"do you like japan",
     L"do you like japan?",
     L"Do you like japan",
-    L"Do you like japan?"
+    L"Do you like japan?",
+    L"do you like Japan",
+    L"do you like Japan?",
+    L"Do you like Japan",
+    L"Do you like Japan?"
 };
 
 struct Com_doyoulikejapan {
