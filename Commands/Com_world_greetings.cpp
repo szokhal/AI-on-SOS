@@ -36,9 +36,9 @@ struct Com_greeting {
 			printfs(L"Hello!\r\n");
 		} else if (compare(L"Spanish")) {
 			printfs(L"Hola!\r\n");
-		} else if (compare("Germany")) {
+		} else if (compare(L"Germany")) {
 			printfs(L"Guten Tag!\r\n");
-		}else if (compare("Chinese")) {
+		}else if (compare(L"Chinese")) {
 			printfs(L"Ni hao!\r\n");
 		}
 	}

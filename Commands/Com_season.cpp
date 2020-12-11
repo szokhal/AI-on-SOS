@@ -35,9 +35,9 @@ struct Com_what_season {
 			printfs(L"There are a lot of pollen\r\n");
 		} else if (compare(L"summer")) {
 			printfs(L"There are many fun events\r\n");
-		} else if (compare(L"autumn")||compare("fall")) {
+		} else if (compare(L"autumn")||compare(L"fall")) {
 			printfs(L"It's a comfortable season\r\n");
-		} else if (compare("winter")) {
+		} else if (compare(L"winter")) {
 			printfs(L"Really!?Me too!!\r\n");
 		}
 	}
