@@ -2,9 +2,9 @@
 #include "../User.cpp"
 #include "../systemcall.cpp"
 
-#define MAX_BOOK_NUMBER 3
+#define MAX_BOOK_NUMBER 5
 
-static wchar_t book_keywords[MAX_BOOK_NUMBER][30] = {
+static wchar_t book_keywords[MAX_BOOK_NUMBER][32] = {
     L"book",
     L"What types of book do you read?",
 		L"What types of book do you read",
@@ -28,15 +28,15 @@ struct Com_book {
   }
 
   void Com_book::execute() {
-    if(user->favoravility < -50) {
+    if(user->favorability < -50) {
         printfs(L"I don't read any books!\r\n");
 				printfs(L"Don't speak to me!!");
-    } else if(user->favoravility < 50) {
+    } else if(user->favorability < 50) {
         printfs(L"I don'tread only textbook while studying.\r\n");
     } else{
 			printfs(L"I like story of adventures.\r\n");
 			printfs(L"It made me excited.\r\n");
-			printfs(L"I am so excited and I couldn't sleep")
+			printfs(L"I am so excited and I couldn't sleep");
 		}
   }
 };

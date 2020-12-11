@@ -38,7 +38,7 @@ struct Com_ilikeyourvoice {
             printfs(L"\r\n");
         } else {
             imageview(L"smile.bgra");
-            printfs(L"I don't have a voice function, do I?")
+            printfs(L"I don't have a voice function, do I?");
             printfs(L"\r\n");
             printfs(L"......\r\n");
             printfs(L"But someday I'd like to speak out too");

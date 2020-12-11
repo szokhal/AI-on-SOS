@@ -2,9 +2,9 @@
 #include "../User.cpp"
 #include "../systemcall.cpp"
 
-#define MAX_FREE_NUMBER 5
+#define MAX_ARE_YOU_FREE_NUMBER 5
 
-static wchar_t free_keywords[MAX_FREE_NUMBER][30] = {
+static wchar_t free_keywords[MAX_ARE_YOU_FREE_NUMBER][30] = {
     L"What should I do",
     L"Free",
 		L"free"
@@ -16,7 +16,7 @@ struct Com_free {
   User * user;
 
   bool Com_free::check(wchar_t *com) {
-    for (int i = 0; i < MAX_FREE_NUMBER; i++) {
+    for (int i = 0; i < MAX_ARE_YOU_FREE_NUMBER; i++) {
       if (strcmps(com, free_keywords[i]))
         return true;
     }
@@ -28,14 +28,14 @@ struct Com_free {
   }
 
   void Com_free::execute() {
-    if(user->favoravility < -50) {
+    if(user->favorability < -50) {
         printfs(L"Go to bed right now!\r\n");
-    } else if(user->favoravility < 0) {
+    } else if(user->favorability < 0) {
         printfs(L"You have to do many things\r\n");
 				printfs(L"homework\r\n");
 				printfs(L"clean room\r\n");
     } else if(user->favorability<50){
-			printfs(L"Me too")
+			  printfs(L"Me too");
         printfs(L"Please talk to me\r\n");
     }else{
 			printfs(L"I'm free now!\r\n");

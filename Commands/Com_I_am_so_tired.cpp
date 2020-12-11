@@ -9,7 +9,7 @@ static wchar_t iamsotired_keywords[MAX_CARING_NUMBER][30] = {
   L"It was hard for work",
   L"I don't feel great",
   L"I made a mistake today"
-  };
+};
 
 struct Com_iamsotired {
   User* user;
@@ -30,7 +30,7 @@ struct Com_iamsotired {
     if(user->favorability < -50) {
         printfs(L"Go to bed early!");
         printfs(L"\r\n");
-    }  else if(use->favorability < 50){
+    }  else if(user->favorability < 50){
         printfs(L"What happened!?");
         printfs(L"\r\n");
     }else{

@@ -1,11 +1,11 @@
-  #pragma once
+#pragma once
 #include "../User.cpp"
 #include "../systemcall.cpp"
 
 #define MAX_OMAE_KAWAII_NUMBER 2  // MAX_HELLO
 
-static wchar_t omae_kawaii_keywords[OMAE_KAWAII_NUMBER][20] = { // ユーザー側が入力する言葉
-  L"omae_kawaii",
+static wchar_t omae_kawaii_keywords[MAX_OMAE_KAWAII_NUMBER][20] = { // ユーザー側が入力する言葉
+  L"omae kawaii",
   L"kawaii"
 };
 
@@ -28,7 +28,7 @@ struct Com_omae_kawaii {
 
   void Com_omae_kawaii::execute() { //main
     printfs(L"Arigato ");
-    // 画像変更入れたい
+    // change image
     *suki = true;    
     printfs(user->name);
     printfs(L"!.\r\n");

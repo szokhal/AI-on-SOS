@@ -4,7 +4,7 @@
 
 #define MAX_PLACE_NUMBER 4
 
-static wchar_t wheredoyoulive_keywords[MAX_PLACE_NUMBER][20] = {{
+static wchar_t wheredoyoulive_keywords[MAX_PLACE_NUMBER][24] = {
 	L"Where do you live",
     L"Are you from Hamamatsu?",
     L"Where are you from?",
@@ -27,10 +27,10 @@ struct Com_wheredoyoulive {
     }
 
     void Com_wheredoyoulive::execute() {
-        if(user->favoravirity < -50){
+        if(user->favorability < -50){
             printfs(L"I won't tell you.");
             printfs(L"\r\n");
-        } else if(user->favoravirity >= -50 && user->facoravirity < 50){
+        } else if(user->favorability >= -50 && user->favorability < 50){
             printfs(L"I live in Japan.");
             printfs(user->name);
             printfs(L".\r\n");
@@ -40,11 +40,11 @@ struct Com_wheredoyoulive {
             printfs(L" How about you \r\n");
             if(compare(L"Hamamatsu")||compare(L"Shizuoka")){
                 printfs(L"Me too!!\r\n");
-            } else if(compare("Japan")){
+            } else if(compare(L"Japan")) {
                 printfs(L"Where do you live in Japan?");
             }else{
-							printfs("Oh,that's a good place ")
-						}
+				printfs(L"Oh,that's a good place ");
+			}
         }
     }
 }

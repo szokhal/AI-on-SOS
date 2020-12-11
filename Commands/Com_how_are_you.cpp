@@ -4,11 +4,11 @@
 
 #define MAX_HOWAREYOU_NUMBER 8
 
-static wchar_t howareyou_keywords[MAX_HOWAREYOU_NUMBER][20] = {{
+static wchar_t howareyou_keywords[MAX_HOWAREYOU_NUMBER][20] = {
 	L"how are you",
     L"how are you?",
     L"how are you today",
-    L"how are you today?"
+    L"how are you today?",
     L"How are you",
     L"How are you?",
     L"How are you today",

@@ -2,10 +2,10 @@
 #include "../User.cpp"
 #include "../systemcall.cpp"
 
-#define MAX_GREETING_NUMBER 2
+#define MAX_GREETING_NUMBER 3
 
-static wchar_t what_greeting_keywords[MAX_GREETING_NUMBER][20] {
-	L""greeting",
+static wchar_t greeting_keywords[MAX_GREETING_NUMBER][48] {
+	L"greeting",
 	L"world greetings",
 	L"please tell me about world greetings",
 };
@@ -13,7 +13,7 @@ static wchar_t what_greeting_keywords[MAX_GREETING_NUMBER][20] {
 struct Com_greeting {
 	User* user;
 
-	Com_greeting::check(wchar_t* com) {
+	bool Com_greeting::check(wchar_t* com) {
 		for (int i = 0; i < MAX_GREETING_NUMBER; i++) {
 			if (strcmps(com, greeting_keywords[i])) {
 				return true;
@@ -26,6 +26,7 @@ struct Com_greeting {
 		this->user = user;
 	}
 
+	// compare ayasii
 	void Com_greeting::execute() {
 		printfs(L"Where?\r\n");
 		printfs(L"Japanese,English,Spanish,Chinese,Germany\r\n");

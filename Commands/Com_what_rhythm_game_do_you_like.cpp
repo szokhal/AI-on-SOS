@@ -4,7 +4,7 @@
 
 #define MAX_WHATRHYTHMGAMEDOYOULIKE_NUMBER 4
 
-static wchar_t whatrhythmgamedoyoulike_keywords[MAX_WHATRHYTHMGAME_NUMBER][30] = {
+static wchar_t whatrhythmgamedoyoulike_keywords[MAX_WHATRHYTHMGAMEDOYOULIKE_NUMBER][32] = {
     L"what rhythm game do you like",
     L"what rhythm game do you like?",
     L"What rhythm game do you like",

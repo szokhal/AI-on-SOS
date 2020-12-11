@@ -19,7 +19,7 @@ struct Com_whatisyourfavoritesweets {
           if (strcmps(com, whatisyourfavoritesweets_keywords[i]))
             return true;
         }
-        return fals;
+        return false;
     }
 
     void Com_whatisyourfavoritesweets::prepare(User * user) {
@@ -40,7 +40,7 @@ struct Com_whatisyourfavoritesweets {
             imageview(L"big_smile.bgra");
             printfs(L"I like sweet potatoes!");
             printfs(L"\r\n");
-            printfs(L"Sweet treats are my favorite!")
+            printfs(L"Sweet treats are my favorite!");
             user->favorability += 10;
         }
     }

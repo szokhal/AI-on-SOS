@@ -4,7 +4,7 @@
 
 #define MAX_WHATSMARTPHONEGAMEDOYOULIKE_NUMBER 4
 
-static wchar_t whatsmartphonegamedoyoulike_keywords[MAX_WHATSMARTPHONEMGAME_NUMBER][30] = {
+static wchar_t whatsmartphonegamedoyoulike_keywords[MAX_WHATSMARTPHONEMGAME_NUMBER][36] = {
     L"what smartphone game do you like",
     L"what smartphone game do you like?",
     L"What smartphone game do you like",

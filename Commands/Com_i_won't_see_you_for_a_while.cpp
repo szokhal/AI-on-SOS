@@ -4,7 +4,7 @@
 
 #define MAX_IWILLNOTSEEYOUFORAWHILE_NUMBER 4
 
-static wchar_t iwillnotseeyouforawhile_keywords[MAX_IWILLNOTSEEYOUFORAWHILE_NUMBER][30] = {
+static wchar_t iwillnotseeyouforawhile_keywords[MAX_IWILLNOTSEEYOUFORAWHILE_NUMBER][32] = {
     L"i will not see you for a while",
     L"i won't see you for a while",
     L"I will not see you for a while",

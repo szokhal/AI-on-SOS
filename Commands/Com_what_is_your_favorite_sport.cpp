@@ -40,7 +40,7 @@ struct Com_whatisyourfavoritesport {
             imageview(L"smile.bgra");
             printfs(L"I like to watch sports in any event");
             printfs(L"\r\n");
-            printfs(L"I want to try esports")
+            printfs(L"I want to try esports");
             user->favorability += 10;
         }
     }

@@ -2,14 +2,14 @@
 #include "../User.cpp"
 #include "../systemcall.cpp"
 
-#define MAX_FREE_NUMBER 4
+#define MAX_FREE_NUMBER 5
 
-static wchar_t doyouhavetimenow_keywords[MAX_FREE_NUMBER][20] = {{
+static wchar_t doyouhavetimenow_keywords[MAX_FREE_NUMBER][24] = {
 	L"Are you free now",
     L"Do you have time now",
     L"free?",
     L"are you free now",
-		L"Are you OK now?"
+	L"Are you OK now?"
 };
 
 struct Com_doyouhavetimenow {
@@ -28,11 +28,11 @@ struct Com_doyouhavetimenow {
     }
 
     void Com_doyouhavetimenow::execute() {
-        if(user->favoravirity < -50){
+        if(user->favorability < -50){
             printfs(L"I'm busy.");
-						printfs(L"I'm so tired")
+		    printfs(L"I'm so tired");
             printfs(L"\r\n");
-        } else if(user->favoravirity >= -50 && user->facoravirity < 50){
+        } else if(user->favorability >= -50 && user->favorability < 50){
             printfs(L"Yes, I'm free now.");
             printfs(user->name);
             printfs(L".\r\n");
@@ -40,11 +40,11 @@ struct Com_doyouhavetimenow {
             printfs(L"I'm free!");
             printfs(user->name);
             printfs(L" Let's talk!! \r\n");
-            if(compare(L"Well, it's nothing")||compare("Well, forget it")){
+            if(compare(L"Well, it's nothing")||compare(L"Well, forget it")){
                 printfs(L"It is a pity\r\n");
             } else{
-							printfs("I'm glad to tallking with you!")
-						}
+				printfs(L"I'm glad to tallking with you!");
+			}
         }
     }
 }

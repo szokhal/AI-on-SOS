@@ -1,17 +1,17 @@
 #pragma once
 #include "../User.cpp"
-clude "../systemcall.cpp"
+#include "../systemcall.cpp"
 
 #define MAX_LIKE_WINDOWS_NUMBER 4
 
-static wchar_t like_windows_keyword[MAX_LIKE_WINDOWS_NUMBER][30] = {
+static wchar_t like_windows_keywords[MAX_LIKE_WINDOWS_NUMBER][30] = {
   L"about windows",
   L"I like windows.",
   L"I like windows"
 };
 
 struct Com_like_windows {
-  User user;
+  User* user;
 
   bool Com_like_windows::check(wchar_t *com) {
     for (int i = 0; i < MAX_LIKE_WINDOWS_NUMBER; i++) {
@@ -21,7 +21,7 @@ struct Com_like_windows {
     return false;
   }
 
-  void Com_like_windows::prepare(User user) {
+  void Com_like_windows::prepare(User* user) {
     this->user = user;
   }
 

@@ -4,7 +4,7 @@
 
 #define MAX_WHEN_YOU_ARE_HAPPY_NUMBER 4
 
-static wchar_t when_you_are_happy_keyword[MAX_WHEN_YOU_ARE_HAPPY_NUMBER][30] = {
+static wchar_t when_you_are_happy_keywords[MAX_WHEN_YOU_ARE_HAPPY_NUMBER][30] = {
   L"When are you happy?",
   L"When are you happy",
   L"what time are you happy?",
@@ -12,7 +12,7 @@ static wchar_t when_you_are_happy_keyword[MAX_WHEN_YOU_ARE_HAPPY_NUMBER][30] = {
 };
 
 struct Com_when_you_are_happy {
-  User user;
+  User* user;
 
   bool Com_when_you_are_happy::check(wchar_t *com) {
     for (int i = 0; i < MAX_HELLO_NUMBER; i++) {
@@ -22,7 +22,7 @@ struct Com_when_you_are_happy {
     return false;
   }
 
-  void Com_when_you_are_happy::prepare(User user) {
+  void Com_when_you_are_happy::prepare(User* user) {
     this->user = user;
   }
 
@@ -33,7 +33,7 @@ struct Com_when_you_are_happy {
       printfs(L"You will be able to discover new horizons with your use of English.\n\r");
     }else {
       printfs(L"I'm happy when I get to know something new!\n\r");
-      printfs(L "When are you happy?");
+      printfs(L"When are you happy?");
     }
   }
 };

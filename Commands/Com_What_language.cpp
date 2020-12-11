@@ -12,7 +12,7 @@ static wchar_t what_language_keywords[MAX_WHAT_LANGUAGE_NUMBER][30] = {
 };
 
 struct Com_what_language {
-  User user;
+  User* user;
 
   bool Com_what_language::check(wchar_t *com) {
     for (int i = 0; i < MAX_WHAT_LANGUAGE_NUMBER; i++) {
@@ -22,7 +22,7 @@ struct Com_what_language {
     return false;
   }
 
-  void Com_what_language::prepare(User user) {
+  void Com_what_language::prepare(User* user) {
     this->user = user;
   }
 

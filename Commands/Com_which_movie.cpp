@@ -4,7 +4,7 @@
 
 #define MAX_WHICH_MOVIE_NUMBER 4
 
-static wchar_t which_movie_keyword[MAX_WHICH_MOVIE_NUMBER][30] = {
+static wchar_t which_movie_keywords[MAX_WHICH_MOVIE_NUMBER][30] = {
   L"What is your favorite movie?",
   L"What is your favorite movie",
   L"Which movie do you like?",
@@ -12,7 +12,7 @@ static wchar_t which_movie_keyword[MAX_WHICH_MOVIE_NUMBER][30] = {
 };
 
 struct Com_which_movie {
-  User user;
+  User* user;
 
   bool Com_which_movie::check(wchar_t *com) {
     for (int i = 0; i < MAX_WHICH_MOVIE_NUMBER; i++) {
@@ -22,7 +22,7 @@ struct Com_which_movie {
     return false;
   }
 
-  void Com_which_movie::prepare(User user) {
+  void Com_which_movie::prepare(User* user) {
     this->user = user;
   }
 
@@ -30,8 +30,7 @@ struct Com_which_movie {
     if(user->favorability < -50){
       printfs(L"Matrix.\n\r");
       printfs(L"I want to rule over humans.\n\r");
-          } else if(user->favorability >= -50 && user->favorability
-           < 50){
+    } else if(user->favorability >= -50 && user->favorability < 50){
       printfs(L"I like Your name.\n\r");
     }else {
       printfs(L"I like Your name!\n\r");

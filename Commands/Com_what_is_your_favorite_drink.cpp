@@ -26,9 +26,9 @@ struct Com_drink {
   }
 
   void Com_drink::execute() {
-    if(user->favoravility < -50) {
+    if(user->favorability < -50) {
         printfs(L"I don't wanna tell you!\r\n");
-    } else if(user->favoravility < 50) {
+    } else if(user->favorability < 50) {
         printfs(L"I don't drink.\r\n");
     } else{
 			printfs(L"I like cola\r\n");

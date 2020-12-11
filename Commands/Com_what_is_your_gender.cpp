@@ -4,12 +4,12 @@
 
 #define MAX_GENDER_NUMBER 5
 
-static wchar_t whatisyourgender_keywords[MAX_GENDER_NUMBER][20] = {{
+static wchar_t whatisyourgender_keywords[MAX_GENDER_NUMBER][24] = {
 	L"What is your gender",
-    L"What is your gender??",
+    L"What is your gender?",
     L"Are you male?",
-    L"Are you female?"
-		L"male or female"
+    L"Are you female?",
+	L"male or female"
 };
 
 struct Com_whatisyourgender {
@@ -28,10 +28,10 @@ struct Com_whatisyourgender {
     }
 
     void Com_whatisyourgender::execute() {
-        if(user->favoravirity < -50){
+        if(user->favorability < -50){
             printfs(L"Either gender is fine with me.");
             printfs(L"\r\n");
-        } else if(user->favoravirity >= -50 && user->facoravirity < 50){
+        } else if(user->favorability >= -50 && user->favorability < 50){
             printfs(L"I'm woman.");
             printfs(user->name);
             printfs(L".\r\n");
@@ -39,9 +39,9 @@ struct Com_whatisyourgender {
             printfs(L"I am a beautiful woman");
             printfs(user->name);
             printfs(L" How about you \r\n");
-            if(compare(L"woman"){
+            if (compare(L"woman")) {
                 printfs(L"Let's be friends\r\n");
-            } else{
+            } else {
                 printfs(L"I see");
             }
         }
