@@ -36,7 +36,7 @@ struct Com_whatPCgamedoyoulike {
             printfs(L"Why do I have to tell you that?");
             printfs(L"\r\n");
         } else if(user->favorability < 50) {
-            imageview(L"normal.bgra");
+            imageview(L"default2.bgra");
             printfs(L"I like Dead by Daylight.");
             printfs(L"\r\n");
         } else {
