@@ -28,7 +28,7 @@ struct Com_wheredoyouwanttogo {
 
     void Com_wheredoyouwanttogo::execute() {
         if(user->favorability < 0){
-            imageview(L"depressed.bgra");
+            imageview(L"despise.bgra");
             printfs(L"Wherever you're not");
             printfs(L"\r\n");
             user->favorability -= 10;
@@ -45,6 +45,7 @@ struct Com_wheredoyouwanttogo {
             printfs(user->name);
             printfs(L"\r\n");
             if(compare(L"Yes") || compare(L"Me too")){
+                imageview(L"love.bgra");
                 printfs(L"I'm glad!!");
                 user->favorability += 20;
             } else {
