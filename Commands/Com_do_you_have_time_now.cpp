@@ -29,21 +29,26 @@ struct Com_doyouhavetimenow {
 
     void Com_doyouhavetimenow::execute() {
         if(user->favorability < -50){
+	    imageview(L"depressed.bgra");
             printfs(L"I'm busy.");
-		    printfs(L"I'm so tired");
+            printfs(L"I'm so tired");
             printfs(L"\r\n");
         } else if(user->favorability >= -50 && user->favorability < 50){
+            imageview(L"default.bgra");
             printfs(L"Yes, I'm free now.");
             printfs(user->name);
             printfs(L".\r\n");
         } else {
+	    imageview(L"smile.bgra");
             printfs(L"I'm free!");
             printfs(user->name);
             printfs(L" Let's talk!! \r\n");
             if(compare(L"Well, it's nothing")||compare(L"Well, forget it")){
+		imageview(L"cry.bgra");
                 printfs(L"It is a pity\r\n");
             } else{
-				printfs(L"I'm glad to tallking with you!");
+		imageview(L"big_smile.bgra");
+		printfs(L"I'm glad to tallking with you!");
 			}
         }
     }
