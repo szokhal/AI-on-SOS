@@ -27,10 +27,13 @@ struct Com_drink {
 
   void Com_drink::execute() {
     if(user->favorability < -50) {
+	imageview(L"despise");
         printfs(L"I don't wanna tell you!\r\n");
     } else if(user->favorability < 50) {
+	imageview(L"jotome.bgra");
         printfs(L"I don't drink.\r\n");
     } else{
+	    		imageview(L"big_smile.bgra");
 			printfs(L"I like cola\r\n");
 			printfs(L"I drink carbonated drinks.\r\n");
 		}
