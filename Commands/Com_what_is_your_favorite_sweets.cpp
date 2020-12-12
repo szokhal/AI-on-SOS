@@ -28,7 +28,7 @@ struct Com_whatisyourfavoritesweets {
 
     void Com_whatisyourfavoritesweets::execute() {
         if(user->favorability < -50){
-            imageview(L"depressed.bgra");
+            imageview(L"despise.bgra");
             printfs(L"I don't want to tell you");
             printfs(L"\r\n");
         } else if(user->favorability < 50){
