@@ -32,7 +32,7 @@ struct Com_doyoulikejapan {
 
     void Com_doyoulikejapan::execute() {
         if(user->favorability < -50){
-            imageview(L"depressed.bgra");
+            imageview(L"despise.bgra");
             printfs(L"I don't know the country");
             printfs(L"\r\n");
         } else {
