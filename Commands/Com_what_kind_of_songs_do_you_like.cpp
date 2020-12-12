@@ -30,7 +30,7 @@ struct Com_whatkindofsongsdoyoulike {
 
     void Com_whatkindofsongsdoyoulike::execute() {
         if(user->favorability < -50){
-            imageview(L"normal.bgra");
+            imageview(L"despise.bgra");
             printfs(L"Just stop harassing me");
             printfs(L"\r\n");
             user->favorability -= 10;
