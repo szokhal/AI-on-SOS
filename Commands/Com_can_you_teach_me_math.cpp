@@ -28,11 +28,11 @@ struct Com_canyouteachmemath {
 
     void Com_canyouteachmemath::execute() {
         if(user->favorability < -50){
-            imageview(L"depressed.bgra");
+            imageview(L"despise.bgra");
             printfs(L"Why do I have to teach you?");
             printfs(L"\r\n");
         } else {
-            imageview(L"smile.bgra");
+            imageview(L"default2.bgra");
             printfs(L"No");
             printfs(L"\r\n");
             printfs(L"I can't teach you, ");
