@@ -36,7 +36,7 @@ struct Com_whatTVgamedoyoulike {
             printfs(L"Why do I have to tell you that?");
             printfs(L"\r\n");
         } else if(user->favorability < 50) {
-            imageview(L"normal.bgra");
+            imageview(L"default.bgra");
             printfs(L"I like Pikmin.");
             printfs(L"\r\n");
         } else {
