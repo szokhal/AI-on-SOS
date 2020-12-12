@@ -28,7 +28,7 @@ struct Com_iwillnotseeyouforawhile {
 
     void Com_iwillnotseeyouforawhile::execute() {
         if(user->favorability < -50){
-            imageview(L"depressed.bgra");
+            imageview(L"despise.bgra");
             printfs(L"You don't have to come home again");
             printfs(L"\r\n");
             user->favorability += 5;
