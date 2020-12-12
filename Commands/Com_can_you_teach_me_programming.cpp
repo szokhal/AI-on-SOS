@@ -28,7 +28,7 @@ struct Com_canyouteachmeprogramming {
 
     void Com_canyouteachmeprogramming::execute() {
         if(user->favorability < -50){
-            imageview(L"depressed.bgra");
+            imageview(L"despise.bgra");
             printfs(L"Who the fuck do you think you are?");
             printfs(L"\r\n");
         } else {
