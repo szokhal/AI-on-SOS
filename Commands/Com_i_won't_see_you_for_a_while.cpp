@@ -32,6 +32,11 @@ struct Com_iwillnotseeyouforawhile {
             printfs(L"You don't have to come home again");
             printfs(L"\r\n");
             user->favorability += 5;
+        } else if(user->favorability) {
+            imageview(L"dead_eyes.bgra");
+            printfs(L"...................");
+            printfs(L"...................");
+            printfs(L"ok");
         } else {
             imageview(L"crying.bgra");
             printfs(L"Really?");
