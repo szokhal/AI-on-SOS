@@ -33,7 +33,7 @@ struct Com_ihateyou {
             printfs(L"\r\n");
             user->favorability -= 10;
         } else if(user->favorability < 50){
-            imageview(L"surprise.bgra");
+            imageview(L"despise.bgra");
             printfs(L"....What?");
             printfs(L"\r\n");
             user->favorability -= 20;
