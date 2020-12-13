@@ -29,11 +29,14 @@ struct Com_book {
 
   void Com_book::execute() {
     if(user->favorability < -50) {
+	    imageview(L"despise.bgra");
         printfs(L"I don't read any books!\r\n");
 				printfs(L"Don't speak to me!!");
     } else if(user->favorability < 50) {
-        printfs(L"I don'tread only textbook while studying.\r\n");
+	    imageview(L"default.bgra");
+        printfs(L"I don't read only textbook while studying.\r\n");
     } else{
+	    imageview(L"smile.bgra");
 			printfs(L"I like story of adventures.\r\n");
 			printfs(L"It made me excited.\r\n");
 			printfs(L"I am so excited and I couldn't sleep");
