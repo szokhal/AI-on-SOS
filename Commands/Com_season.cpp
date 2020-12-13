@@ -33,7 +33,7 @@ struct Com_what_season {
 		printfs(L"I like winter\r\n");
 		printfs(L"How about you?");
 		if (compare(L"spring")) {
-			mageview(L"dead_eyes.bgra");
+			imageview(L"dead_eyes.bgra");
 			printfs(L"There are a lot of pollen\r\n");
 		} else if (compare(L"summer")) {
 			imageview(L"default.bgra");

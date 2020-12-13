@@ -30,7 +30,7 @@ struct Com_riddle {
     if(user->favorability < -50){
       printfs(L"During what month do people sleep the least?\n\r");
       user->favorability += 20; 
-    } else if(user->favorability >= -50 && user->facoravility < 50){
+    } else if(user->favorability >= -50 && user->favorability < 50){
       printfs(L" What is the center of gravity?\n\r");
       user->favorability += 20; 
     }else {
