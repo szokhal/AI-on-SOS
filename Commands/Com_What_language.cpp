@@ -28,10 +28,13 @@ struct Com_what_language {
 
   void Com_what_language::execute() {
     if(user->favorability < -50){
+      imageview(L"dead_eyes.bgra");
       printfs(L"Who the fuck do you think you are?\n\r");
     } else if(user->favorability < 50) {
+      imageview(L"default.bgra");
       printfs(L"I can speak a bit of English.\n\r");
     }else {
+      imageview(L"smile.bgra");
       printfs(L"I can speak a bit of English.\n\r");
       printfs(L"I intend to work hard to became able to speak English well!\n\r");
     }
