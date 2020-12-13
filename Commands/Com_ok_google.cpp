@@ -27,6 +27,7 @@ struct Com_ok_google {
     }
 
     void Com_ok_google::execute() {
+        imageview(L"depressed.bgra");
         printfs(L"Who's that woman!!\r\n");
         user->favorability -= 30;
     }
