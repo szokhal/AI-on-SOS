@@ -30,6 +30,7 @@ struct Com_greeting {
 	void Com_greeting::execute() {
 		printfs(L"Where?\r\n");
 		printfs(L"Japanese,English,Spanish,Chinese,Germany\r\n");
+		imageview(L"big_smile.bgra");
 		if (compare(L"Japanese")) {
 			printfs(L"Konnichiha!\r\n");
 		} else if (compare(L"English")) {
@@ -38,7 +39,7 @@ struct Com_greeting {
 			printfs(L"Hola!\r\n");
 		} else if (compare(L"Germany")) {
 			printfs(L"Guten Tag!\r\n");
-		}else if (compare(L"Chinese")) {
+		} else if (compare(L"Chinese")) {
 			printfs(L"Ni hao!\r\n");
 		}
 	}
