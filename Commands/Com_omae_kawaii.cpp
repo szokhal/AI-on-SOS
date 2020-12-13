@@ -27,8 +27,8 @@ struct Com_omae_kawaii {
   }
 
   void Com_omae_kawaii::execute() { //main
+    imageview(L"love.bgra");
     printfs(L"Arigato ");
-    // change image
     *suki = true;    
     printfs(user->name);
     printfs(L"!.\r\n");
