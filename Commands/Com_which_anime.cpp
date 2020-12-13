@@ -4,7 +4,7 @@
 
 #define MAX_WHICH_ANIME_NUMBER 3
 
-static wchar_t which_anime_keyword[MAX_WHICH_ANIME_NUMBER][30] = {
+static wchar_t which_anime_keywords[MAX_WHICH_ANIME_NUMBER][30] = {
   L"which anime do you like?",
   L"about anime",
   L"which anime do you like"
