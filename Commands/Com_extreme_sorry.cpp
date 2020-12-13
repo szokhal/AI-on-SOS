@@ -25,6 +25,7 @@ struct Com_extreme_sorry {
     }
 
     void Com_extreme_sorry::execute() {
+        imageview(L"default2.bgra");
         printfs(L"I get it");
         user->favorability = 0;
     }
