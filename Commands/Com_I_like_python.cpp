@@ -26,8 +26,10 @@ struct Com_ILIKEPYTHON {
 
   void Com_ILIKEPYTHON::execute(){
 		printfs(L"It's silly if you use only useful libraries.\r\n");
+		imageview(L"jotome.bgra");
 		printfs(L"c++is the supreme\r\n");
 			user->favoravility -=10 ;
 		}
   }
+	imageview(L"default.bgra");
 };

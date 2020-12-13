@@ -28,11 +28,14 @@ struct Com_WHATDOYOUDOFORCHRISTMAS {
   void Com_WHATDOYOUDOFORCHRISTMAS::execute() {
     if(user->favoravility < 0){
         printfs(L"There are no particular plans.");
+				imageview(L"depressed.bgra");
         printfs(L"\r\n");
 			}else{
 				printfs(L"Celebrate the birth of Jesus Christ.");
 				printfs(L"\r\n");
+				imageview(L"big_smile.bgra");
 			}
 			user->favoravility += 10;
 		}
+		imageview(L"default.bgra");
 };

@@ -29,9 +29,11 @@ struct Com_WHATISYOURFAVORITEPOKEMON {
     if(user->favoravility < 0){
         printfs(L"I don't like any pokemon.");
         printfs(L"\r\n");
+				imageview(L"jotome.bgra");
 			}else{
-				printfs(L"My favorite Pokemon is Pikachu It's cute.");
+				printfs(L"My favorite Pokemon is Pikachu. It's cute.");
 				printfs(L"\r\n");
+				imageview(L"big_smile.bgra");
 			}
 			user->favoravility += 10;
 		}

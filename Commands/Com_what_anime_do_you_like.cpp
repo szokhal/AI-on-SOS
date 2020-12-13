@@ -27,12 +27,15 @@ struct Com_WHATANIMEDOYOULIKE {
   void Com_WHATANIMEDOYOULIKE::execute() {
     if(user->favoravility < 0){
         printfs(L"I don't like watching anime.");
+				imageview(L"jotome.bgra");
         printfs(L"\r\n");
     }else{
 			printfs(L"I like SAO.");
+			imageview(L"big_smile.bgra");
 			printfs(L"\r\n");
 		}
 		user->favoravility+=10;
 		}
 	}
+	imageview(L"default.bgra");
 };

@@ -27,11 +27,15 @@ struct Com_WHATDOYOULIKEABOUTSUSHI {
   void Com_WHATDOYOULIKEABOUTSUSHI::execute() {
     if(user->favoravility < 0){
         printfs(L"I don't like sushi.");
+
         printfs(L"\r\n");
+				imageview(L"jotome.bgra");
+
     }else {
 			printfs(L"I like salmon.");
 			printfs(L"\r\n");
 		}
 		}
   }
+	imageview(L"default.bgra");
 };

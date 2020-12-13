@@ -28,13 +28,16 @@ struct Com_GIVEMEMONEY {
     if(user->favoravility < 0){
         printfs(L"Work.");
         printfs(L"\r\n");
+				imageview(L"jotome.bgra");
 				user->favoravility -= 10;
     }else if(user->favoravility >= 0 &&user->favoravility < 99){
 				printfs(L"I'll give you 100 yen");
         printfs(L"\r\n");
+				imageview(L"smile.bgra");
     }else{
 				printfs(L"I'll give you 100 million yen!!!!!!!!!");
 				printfs(L"\r\n");
+				imageview(L"big_smile.bgra");
 				user->favoravility += 10;
 			}
 		}

@@ -28,10 +28,13 @@ struct Com_WHATDOYOUTHINKABOUTSHIZUOKAUNIVERSITY {
     if(user->favoravility < 0){
         printfs(L"I think it's a university that seems inconvenient because it's far from the station.");
         printfs(L"\r\n");
+				imageview(L"depressed.bgra");
 			}else{
 				printfs(L"I think it's a very nice university.");
 				printfs(L"\r\n");
+				imageview(L"big_smile.bgra");
 			}
 			user->favoravility += 10;
 		}
+		imageview(L"default.bgra");
 };

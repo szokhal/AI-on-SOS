@@ -30,5 +30,7 @@ struct Com_ILIKESPORTS {
   void Com_ILIKESPORTS::execute() {
     printfs(L"I also like it. I can't play it, but I enjoy watching it");
 			user->favoravility += 10;
+			imageview(L"big_smile.bgra");
 		}
+		imageview(L"default.bgra");
 };

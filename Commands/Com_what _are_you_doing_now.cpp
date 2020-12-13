@@ -27,11 +27,14 @@ struct Com_WHATAREYOUDOINGNOW {
   void Com_WHATAREYOUDOINGNOW::execute() {
     if(user->favoravility < 0){
         printfs(L"Don't talk.");
+				imageview(L"jotome.bgra");
         printfs(L"\r\n");
 			}else{
-				printfs(L"MI'm surfing the internet now.");
+				printfs(L"I'm surfing the internet now.");
+				imageview(L"big_smile.bgra");
 				printfs(L"\r\n");
 			}
 			user->favoravility += 10;
 		}
+		imageview(L"default.bgra");
 };

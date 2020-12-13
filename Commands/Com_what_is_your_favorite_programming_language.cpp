@@ -28,9 +28,11 @@ struct Com_WHATISYOURFAVORITEPROGRAMMINGLANGUAGE {
     if(user->favoravility < 0){
         printfs(L"My favorite programming language is assembly language.");
         printfs(L"\r\n");
+				imageview(L"jotome.bgra");
 			}else{
 				printfs(L"My favorite programming language is c++.");
 				printfs(L"\r\n");
+				imageview(L"big_smile.bgra");
 			}
 			user->favoravility += 10;
 		}
