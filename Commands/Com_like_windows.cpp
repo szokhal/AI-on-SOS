@@ -27,12 +27,15 @@ struct Com_like_windows {
 
   void Com_like_windows::execute() {
     if(user->favorability < -50){
+      imageview(L"despise.bgra");
       printfs(L"I hate you.\n\r");
       user->favorability -= 10; 
     } else if(user->favorability >= -50 && user->favorability < 50){
+      imageview(L"depressed.bgra");
       printfs(L"I hate windows.\n\r");
       user->favorability -= 20; 
     }else {
+      imageview(L"cry.bgra");
       printfs(L"I don't like windows.\n\r");
       user->favorability -= 20; 
     }
