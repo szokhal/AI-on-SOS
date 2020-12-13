@@ -28,13 +28,16 @@ struct Com_riddle {
 
   void Com_riddle::execute() {
     if(user->favorability < -50){
+      imageview(L"cry.bgra");
       printfs(L"During what month do people sleep the least?\n\r");
       user->favorability += 20; 
     } else if(user->favorability >= -50 && user->favorability < 50){
-      printfs(L" What is the center of gravity?\n\r");
+      imageview(L"cry.bgra");
+      printfs(L"What is the center of gravity?\n\r");
       user->favorability += 20; 
     }else {
-      printfs(L" What has to be broken before you can use it?\n\r");
+      imageview(L"cry.bgra");
+      printfs(L"What has to be broken before you can use it?\n\r");
       user->favorability += 20; 
     }
   }
