@@ -29,15 +29,19 @@ struct Com_free {
 
   void Com_free::execute() {
     if(user->favorability < -50) {
+	imageview(L"depressed.bgra");    
         printfs(L"Go to bed right now!\r\n");
     } else if(user->favorability < 0) {
+	    imageview(L"jotome.bgra");
         printfs(L"You have to do many things\r\n");
 				printfs(L"homework\r\n");
 				printfs(L"clean room\r\n");
     } else if(user->favorability<50){
+	    imageview(L"smile.bgra");
 			  printfs(L"Me too");
         printfs(L"Please talk to me\r\n");
     }else{
+	    imageview(L"love.bgra");
 			printfs(L"I'm free now!\r\n");
 			printfs(L"Please talk to me right now!!\r\n");
 		}
