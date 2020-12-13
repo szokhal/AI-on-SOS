@@ -27,9 +27,11 @@ struct Com_you_are_cute {
 
     void Com_you_are_cute::execute() {
         if(user->favorability < -50) {
+            imageview(L"despise.bgra");
             printfs(L"Are you confused?\r\n");
             user->favorability -= 5;
         } else {
+            imageview(L"smile.bgra");
             printfs(L"Thank you!!\r\n");
             user->favorability += 3;
         }
