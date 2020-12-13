@@ -28,14 +28,19 @@ struct Com_what_weather {
 
     void Com_what_weather::execute() {
         if (user->favorability < -50) {
+            imageview(L"dead_eyes.bgra");
             printfs(L"Great storm\r\n");
         } else if (user->favorability < 0) {
+            imageview(L"cry.bgra");
             printfs(L"Rainy\r\n");
         } else if (user->favorability < 50) {
+            imageview(L"default2.bgra");
             printfs(L"Cloudy\r\n");
         } else if (user->favorability < 75) {
+            imageview(L"smile.bgra");
             printfs(L"Sunny\r\n");
         } else {
+            imageview(L"love.bgra");
             printfs(L"Great!!\r\n");
         }
     }
