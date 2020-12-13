@@ -28,11 +28,14 @@ struct Com_one_more_language {
 
   void Com_one_more_language::execute() {
     if(user->favorability < -50){
+      imageview(L"depressed.bgra");
       printfs(L"Japanese\n\r");
-        } else if(user->favorability >= -50 && user->favorability < 50){
-      printfs(L"I want to be able to speak Japanese.\n\r");
+    }else if(user->favorability >= -50 && user->favorability < 50){
+      imageview(L"cry.bgra");
+      printfs(L"I want to speak Japanese.\n\r");
     }else {
-      printfs(L"I want to be able to speak Japanese.\n\r");
+      imageview(L"smile.bgra");
+      printfs(L"I want to speak Japanese.\n\r");
       printfs(L"Because the person who made it for me is Japanese..\n\r");
     }
   }
