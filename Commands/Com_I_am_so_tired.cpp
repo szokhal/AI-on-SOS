@@ -28,12 +28,15 @@ struct Com_iamsotired {
 
   void Com_iamsotired::execute() {
     if(user->favorability < -50) {
+	imageview(L"despise.bgra");
         printfs(L"Go to bed early!");
         printfs(L"\r\n");
     }  else if(user->favorability < 50){
+　　　   imageview(L"surprise.bgra");
         printfs(L"What happened!?");
         printfs(L"\r\n");
     }else{
+	    imageview(L"big_smile.bgra");
 			printfs(L"Do you need me?");
 			printfs(L"\r\n");
 			printfs(L"Is there anything I can do?");
