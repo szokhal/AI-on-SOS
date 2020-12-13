@@ -8,6 +8,7 @@ struct Com_nothing {
     }
 
     void Com_nothing::execute() {
+        imageview(L"cry.bgra");
         printfs(L"It doesn't make sense.\r\n");
     }
 };
