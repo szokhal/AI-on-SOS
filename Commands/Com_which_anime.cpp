@@ -28,11 +28,15 @@ struct Com_which_anime {
   void Com_which_anime::execute() {
     if(user->favorability < -50){
       printfs(L"I have nothing to talk with you.\n\r");
+      imageview(L"dead_eyes.bgra");
     } else if(user->favorability >= -50 && user->favorability < 50){
       printfs(L"I like Laid-Back Camp.\n\r");
+      imageview(L"smile.bgra");
     }else {
       printfs(L"I like Laid-Back Camp.\n\r");
       printfs(L"Because Shizuoka is Laid-Back Camp's pilgrimage.\n\r");
+      imageview(L"big_smile.bgra");
     }
+    imageview(L"default.bgra");
   }
 };

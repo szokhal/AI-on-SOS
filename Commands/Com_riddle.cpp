@@ -4,7 +4,7 @@
 
 #define MAX_RIDDLE_NUMBER 4
 
-static wchar_t riddle_keywords[MAX_RIDDLE_NUMBER][30] = {
+static wchar_t riddle_keyword[MAX_RIDDLE_NUMBER][30] = {
   L"riddle",
   L"Riddle",
   L"nazonazo",
@@ -12,7 +12,7 @@ static wchar_t riddle_keywords[MAX_RIDDLE_NUMBER][30] = {
 };
 
 struct Com_riddle {
-  User* user;
+  User user;
 
   bool Com_riddle::check(wchar_t *com) {
     for (int i = 0; i < MAX_RIDDLE_NUMBER; i++) {
@@ -22,23 +22,21 @@ struct Com_riddle {
     return false;
   }
 
-  void Com_riddle::prepare(User* user) {
+  void Com_riddle::prepare(User user) {
     this->user = user;
   }
 
   void Com_riddle::execute() {
     if(user->favorability < -50){
-      imageview(L"cry.bgra");
       printfs(L"During what month do people sleep the least?\n\r");
       user->favorability += 20; 
-    } else if(user->favorability >= -50 && user->favorability < 50){
-      imageview(L"cry.bgra");
-      printfs(L"What is the center of gravity?\n\r");
+    } else if(user->favorability >= -50 && user->facoravility < 50){
+      printfs(L" What is the center of gravity?\n\r");
       user->favorability += 20; 
     }else {
-      imageview(L"cry.bgra");
-      printfs(L"What has to be broken before you can use it?\n\r");
+      printfs(L" What has to be broken before you can use it?\n\r");
       user->favorability += 20; 
     }
+    imageview(L"default.bgra");
   }
 };
