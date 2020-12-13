@@ -8,10 +8,10 @@ static wchar_t which_anime_keyword[MAX_WHICH_ANIME_NUMBER][30] = {
   L"which anime do you like?",
   L"about anime",
   L"which anime do you like"
-   };
+};
 
 struct Com_which_anime {
-  User user;
+  User* user;
 
   bool Com_which_anime::check(wchar_t *com) {
     for (int i = 0; i < MAX_WHICH_ANIME_NUMBER; i++) {
@@ -21,7 +21,7 @@ struct Com_which_anime {
     return false;
   }
 
-  void Com_which_anime::prepare(User user) {
+  void Com_which_anime::prepare(User* user) {
     this->user = user;
   }
 
@@ -32,11 +32,10 @@ struct Com_which_anime {
     } else if(user->favorability >= -50 && user->favorability < 50){
       printfs(L"I like Laid-Back Camp.\n\r");
       imageview(L"smile.bgra");
-    }else {
+    } else {
       printfs(L"I like Laid-Back Camp.\n\r");
       printfs(L"Because Shizuoka is Laid-Back Camp's pilgrimage.\n\r");
       imageview(L"big_smile.bgra");
     }
-    imageview(L"default.bgra");
   }
 };

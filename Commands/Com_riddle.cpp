@@ -4,7 +4,7 @@
 
 #define MAX_RIDDLE_NUMBER 4
 
-static wchar_t riddle_keyword[MAX_RIDDLE_NUMBER][30] = {
+static wchar_t riddle_keywords[MAX_RIDDLE_NUMBER][20] = {
   L"riddle",
   L"Riddle",
   L"nazonazo",
@@ -12,7 +12,7 @@ static wchar_t riddle_keyword[MAX_RIDDLE_NUMBER][30] = {
 };
 
 struct Com_riddle {
-  User user;
+  User* user;
 
   bool Com_riddle::check(wchar_t *com) {
     for (int i = 0; i < MAX_RIDDLE_NUMBER; i++) {
@@ -22,7 +22,7 @@ struct Com_riddle {
     return false;
   }
 
-  void Com_riddle::prepare(User user) {
+  void Com_riddle::prepare(User* user) {
     this->user = user;
   }
 
