@@ -27,12 +27,15 @@ struct Com_like_linux {
 
   void Com_like_linux::execute() {
     if(user->favorability < -50){
+      imageview(L"jotome.bgra");
       printfs(L"Linux is a good one.\n\r");
       user->favorability += 10; 
     } else if(user->favorability >= -50 && user->favorability < 50){
+      imageview(L"smile.bgra");
       printfs(L"Linux is my favorite too!\n\r");
       user->favorability += 20; 
     }else {
+      imageview(L"love.bgra");
       printfs(L"Linux is my favorite too!\n\r");
       printfs(L"I was made by linux.\n\r");
       user->favorability += 30; 
