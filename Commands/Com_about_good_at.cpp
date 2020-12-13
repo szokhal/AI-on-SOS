@@ -27,10 +27,13 @@ struct Com_about_good_at {
 
   void Com_about_good_at::execute() {
     if(user->favorability < -50){
+      imageview(L"jotome.bgra");
       printfs(L"I have nothing to talk with you.\\n\r");
     } else if(user->favorability >= -50 && user->favorability < 50){
+      imageview(L"default2.bgra");
       printfs(L"I'm good at talking to people.\n\r");
     }else {
+      imageview(L"love.bgra");
       printfs(L"I'm good at talking to people.\n\r");
       printfs(L"Please talk to me a lot.\n\r");
     }
